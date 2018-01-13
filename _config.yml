@@ -11,8 +11,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Taehyeon AN # add your name
 author-img: antaehyeon-profile.png # add your photo
-about-author: 프론트엔드 개발자를 꿈꾸고 있는 대학생입니다.
-많은 경험을 토대로 성장하여 나중에 누군가에게 저의 지식을 공유해주는 것이 인생의 목표입니다.  # add description
+about-author: 프론트엔드 개발자를 꿈꾸고 있는 대학생입니다. 많은 경험을 토대로 성장하여 나중에 누군가에게 저의 지식을 공유해주는 것이 인생의 목표입니다.  # add description
 twitter: # add your Twitter handle
 facebook: # add your Facebook handle
 github: antaehyeon # add your Github handle
