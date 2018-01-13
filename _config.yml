@@ -9,17 +9,17 @@ url: "https://antaehyeon.github.io" # the base hostname & protocol for your site
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
+author: Taehyeon AN # add your name
+author-img: antaehyeon-profile.jpg # add your photo
+about-author: 프론트엔드 개발자를 꿈꾸고 있는 대학생입니다. 많은 경험을 토대로 성장하여 나중에 누군가에게 저의 지식을 공유해주는 것이 인생의 목표입니다.  # add description
 twitter: # add your Twitter handle
 facebook: # add your Facebook handle
-github: artemsheludko # add your Github handle
+github: antaehyeon # add your Github handle
 linkedin: # add your Linkedin handle
-email: # add your Email address
+email: antaehyeon@sju.ac.kr # add your Email address
 
 # Disqus
-discus-identifier: mr-brown # add your discus identifier
+discus-identifier: hyeon # add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
