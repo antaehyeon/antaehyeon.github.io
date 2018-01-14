@@ -84,4 +84,5 @@ tags: [Java, JavaScript, 차이점] # add tag
    - [JavaScript 소개](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%EC%86%8C%EA%B0%9C)
    - [Java와 JavaScript의 다른 점은 무엇입니까?](https://www.java.com/ko/download/faq/java_javascript.xml)
    - [What does it mean that JavaScript is "dynamic"?](https://stackoverflow.com/questions/32476680/what-does-it-mean-that-javascript-is-dynamic)
+   - [JAVA와 JAVASCRIPT의 차이점은 ?](http://blog.wishket.com/java%EC%99%80-javascript%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90%EC%9D%80-2/)
 
