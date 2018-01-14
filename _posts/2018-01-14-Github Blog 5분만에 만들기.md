@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Github Blog 5분만에 만들기 (SourceTree 이용)"
+title: "Github Blog 5분만에 만들기"
 date: 2018-01-14 12:52:35 +0900
 description: Github Blog를 같이 만들어볼겁니다. (optional)
 img: github_blog_thumbnail.png # Add image post (optional)
@@ -20,9 +20,8 @@ tags: [Github Blog, Github Blog 만들기, 깃허브블로그, 깃헙블로그, 
 - ### 준비할 사항들
 
   1. [Github ID](https://github.com/)
-  2. [Source Tree](https://www.sourcetreeapp.com/)
 
-  > Github 가입과, SourceTree 설치는 시간 관계상 생략하도록 하겠습니다.
+  > Github 가입은 시간 관계상 생략하도록 하겠습니다.
 
 ***
 
@@ -64,7 +63,7 @@ tags: [Github Blog, Github Blog 만들기, 깃허브블로그, 깃헙블로그, 
 
    ![Start]({{site.baseurl}}/assets/img/github_blog.png)
 
-   축하합니다 ! 당신의 깃허브 블로그 페이지는 https://githubId.github.io 입니다. 접속해보십시오!
+   축하합니다 ! 당신의 깃허브 블로그 페이지는 `https://자신의깃허브아이디.github.io` 입니다. 접속해보십시오!
 
    > 만약 접속이 안된다면, 약간의 시간을 두고 접속해보십시오 :)
 
