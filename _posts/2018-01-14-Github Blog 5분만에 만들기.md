@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Github Blog 5분만에 만들기"
-date: 2018-01-14 12:52:35 +0900
+date: 2018-01-14 00:52:35 +0900
 description: Github Blog를 같이 만들어볼겁니다. (optional)
 img: github_blog_thumbnail.png # Add image post (optional)
 tags: [Github Blog, Github Blog 만들기, 깃허브블로그, 깃헙블로그, 깃허브블로그 만들기] # add tag
