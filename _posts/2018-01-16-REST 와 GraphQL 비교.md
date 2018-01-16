@@ -3,7 +3,7 @@ layout: post
 title: "REST 와 GraphQL 비교"
 date: 2018-01-16 21:23:00 +0900
 description: REST와 GraphQL에 대해서 비교해보겠습니다. (optional)
-img: computer_science_0.png # Add image post (optional)
+img: rest_graphQL.png # Add image post (optional)
 tags: [REST, GraphQL] # add tag
 ---
 
