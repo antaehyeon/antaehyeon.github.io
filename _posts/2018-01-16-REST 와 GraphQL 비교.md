@@ -21,7 +21,7 @@ tags: [REST, GraphQL] # add tag
 
       ---
 
-      #### REST 에서의 리소스
+      REST 에서의 리소스
 
       Resource 는 웹이 제공하는 **데이터**를 의미합니다. 예를 들어, 파일이나 이미지 같은 것들을 포함해서 모든 데이터들을요. 해당 이미지나 파일들에게는 각각의 **식별자(identifier)** 이 존재합니다. 우리는 이것을 **URI** 이라고 부릅니다.
 
@@ -33,7 +33,7 @@ tags: [REST, GraphQL] # add tag
 
       ---
 
-      #### REST 의 특성 6가지
+      REST 의 특성 6가지
 
       1. 클라이언트/서버 구조
       2. 무상태(Stateless)
@@ -52,6 +52,12 @@ tags: [REST, GraphQL] # add tag
       - [REST에서 GraphQL 과 RELAY로 갈아타기 - 이정우](https://www.slideshare.net/deview/112rest-graph-ql-relay)
       - [조대협의 블로그](http://bcho.tistory.com/953)
       - [Representational State Transfer(REST) 란?](http://egloos.zum.com/tiger5net/v/5202221)
+      - [REST API의 이해와 설계-#1 개념 소개](http://bcho.tistory.com/953)
       - [RESTFUL(Representational Safe Transfer)](http://egloos.zum.com/tiger5net/v/5202221)
       - [Building Web Services the REST Way](http://www.xfront.com/REST-Web-Services.html)
+      - [REST - Wiki](https://ko.wikipedia.org/wiki/REST)
+      - [GraphQL을 오해하다](https://medium.com/@FourwingsY/graphql%EC%9D%84-%EC%98%A4%ED%95%B4%ED%95%98%EB%8B%A4-3216f404134)
+      - [GitHub Developer](https://developer.github.com/v3/guides/getting-started/)
+      - [GraphQL 강좌 1편 : GraphQL이 무엇인가?](https://velopert.com/2318)
+      - [바쁜 개발자들을 위한 REST 논문 요약](https://blog.npcode.com/2017/03/02/%EB%B0%94%EC%81%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-rest-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD/)
       - ​
