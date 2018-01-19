@@ -1,15 +1,19 @@
 ---
 layout: post
-title: "REST 와 GraphQL 비교"
+title: "REST API 개념원리"
 date: 2018-01-16 21:23:00 +0900
-description: REST와 GraphQL에 대해서 비교해보겠습니다. (optional)
-img: rest_graphQL.png # Add image post (optional)
+description: REST API 개념원리 (optional)
+img: rest_0.png # Add image post (optional)
 tags: [REST, GraphQL] # add tag
 ---
 
 0. ### 서론
 
       GitHub 의 데이터를 Parsing 해야하는 필요가 있어서, GitHub Developer 를 참고하던 도중 API Docs에 REST API와 GraphQL API가 눈에 들어왔습니다. GraphQL을 검색해보니 REST의 단점들을 해결하는 흥미로운 부분이 많아서 해당 주제로 글을 쓰면 좋겠다는 생각이 들어서 작성하게 되었습니다. 
+
+      ---
+
+      원래는 이 의도였으나, REST 에 대한 자료조사와 개념적으로 접근하니 작성해야 할 내용들이 너무 많더군요. 그래서 글을 조금 나누려고 합니다. **현재의 글에는 REST에 대한 내용밖에 적혀있지 않습니다!** 이후 REST, REST API, Restful, GraphQL, 차이점, 결론 정도로 글을 작성할 예정이에요! 꼭 작성하겠습니다 :)
 
 1. ### REST API
 
@@ -19,9 +23,11 @@ tags: [REST, GraphQL] # add tag
 
       > 어떤 특정한 언어가 아닙니다. **네트워크 시스템의 architecture style** 입니다
 
+      HTTP의 특성을 그대로 받기 때문에, **HTTP의 전송메소드**를 사용합니다. `생성은 POST 수정은 PUT 조회는 GET 삭제는 DELETE` 입니다.
+
       ---
 
-      REST 에서의 리소스
+      ### REST 에서의 리소스
 
       Resource 는 웹이 제공하는 **데이터**를 의미합니다. 예를 들어, 파일이나 이미지 같은 것들을 포함해서 모든 데이터들을요. 해당 이미지나 파일들에게는 각각의 **식별자(identifier)** 이 존재합니다. 우리는 이것을 **URI** 이라고 부릅니다.
 
@@ -33,21 +39,112 @@ tags: [REST, GraphQL] # add tag
 
       ---
 
-      REST 의 특성 6가지
+      ### REST 의 특성 6가지
 
-      1. 클라이언트/서버 구조
-      2. 무상태(Stateless)
-      3. 캐시 처리 가능(Cacheable)
-      4. 유니폼 인터페이스(Uniform Interface)
-      5. 자체 표현 구조 (Self-descriptiveness)
+      1. #### 클라이언트/서버 구조
 
-2. ### GraphQL
+         REST는 클라이언트 서버 구조입니다. 이렇게 되면 뭐가 좋아지냐면, 클라이언트가 무엇을 처리할지/서버가 무엇을 처리할지 **명확하게 구분**이 된다는 점 입니다. 명확하게 구분되면 당연히 서로간의 **의존성이 줄어들게** 됩니다. 의존성이 줄어들게 되면, 클라이언트는 클라이언트에 주력할 수 있고, 서버는 서버에 주력할 수 있습니다.
 
-3. ### 차이점
+         > 즉, 각자의 환경에 주력할 수 있는 구조가 마련되는 것이죠 :) 
 
-4. ### 기타
+      2. #### 무상태(Stateless)
 
-5. ### 출처
+         무상태는 클라이언트와 서버간 통신시 **상태가 존재하지 않는 것**을 뜻합니다. 즉 클라이언트의 Session 데이터를 서버가 가지고있지 않으며, 모든 요청에 필요한 정보를 담고있습니다. 이 말은 즉슨, 요청만 봐도 어떤것을 하는지 알 수 있듯이 **가시성이 개선**되고, 서버는 해당 요청만 처리하면 되므로 **구현이 단순**해지는 장점이 있습니다.
+
+      3. #### 캐시 처리 가능(Cacheable)
+
+         REST가 HTTP라는 기존의 웹 표준을 그대로 사용하기 때문에, HTTP의 가장 강력한 특징 중 하나인 **'캐싱'**을 사용할 수 있습니다. '캐싱'을 사용하게 되면 **서버가 일일이 처리하지 않기 때문**에 **전체 응답시간 및 성능 그리고 서버의 자원활용을 비약적으로 증가**시킬 수 있습니다.
+
+         > Client 쪽에서 'Last-Modified' 라는 값을 헤더에 담아 보내면, 서버쪽에서는 해당 값으로 바뀐내용이 있다면 Response 하고, 바뀐내용이 없다면 '304 NotModified' 를 리턴한다. 그러면 Client는 자체 Cache에 저장된 값을 사용하게 된다.
+
+      4. #### 유니폼 인터페이스(Uniform Interface)
+
+         REST는 HTTP표준에만 맞다면, **어디에서든지 사용가능한 느슨한 결함(Loosely coupling) 형태의 구조**입니다. 이 말은 즉슨, HTTP와 JSON으로 REST API를 정의했다면, 안드로이드나 iOS나 C, Python 등 특정 언어와 상관없이 사용할 수 있습니다.
+
+         > REST가 HTTP + JSON이다 라고 생각하시는 분들이 많은데, 메세지 포맷이 꼭 JSON이 아니여도 됩니다. 자바스크립트가 흥행하기 전 XML 형태를 가장 많이 사용했으며, 사용의 편리성 때문에 JSON을 많이 사용하게 되었습니다.
+
+      5. #### 자체 표현 구조 (Self-descriptiveness)
+
+         아까 '무상태성'의 특징 중 하나인데, 구현이 단순하다는 뜻은 **REST API가 쉽다는 것**을 뜻합니다. 즉, API 메세지로만 무슨 행동을 하는지 알 수 있는 특징을 가지고 있습니다.
+
+         > 기본적으로 REST 기반의 Open API들이 문서를 별도로 제공하고 있지만, 최소한의 문서로도 API 자체를 이해할 수 있는 목적으로 만들어지게 되었습니다.
+
+      ---
+
+      ### REST의 한계
+
+      하지만 REST API에도 한계는 존재합니다. 요청을 하면 반환값이 정해져있기 때문에 자신이 필요하지 않은 정보까지도 다 가져와야 한다던가, 그러기 때문에 서버에 대한 부하도 어느정도 존재합니다. 그리고 설계에서도 문서관리 부분들이 존재합니다. 
+
+      1. #### 필드제한 (Sparse Fieldset)
+
+         REST API 를 사용하기 위해서 `모든 필드를 전부다 가져와야 하거나`, `접근 권한이 없는 필드에 대한 처리여부`, `요청을 하는 유저 (관리자, 일반) 에 따른 다른 결과값`을 주어야 하는지에 대한 부분을 처리할 수가 없다.
+
+         ```c
+         GET /users/1/following/?fields[users]=username, email HTTP/1.1
+         Accept: application/vnd.api+json
+         ```
+
+         위와 같이 username과 email의 데이터만 받아오고 싶겠지만, **결국에는 모든 유저의 username과 email을 가져오게 됩니다.**
+
+      2. #### 필드 타입 (Field Type)
+
+         JSON으로 받아온 결과 값에 대해서 Nested Object 이므로, 타입에 대해서 명확하게 정할수가 없습니다. 
+
+         ```js
+         GET /payments/1/?fields[payments]=amount,data HTTP/1.1
+         Accept: application/vnd.api+json
+         {
+           data: {
+             type: "payments",
+             id: "1",
+             attributes: {
+               amount: "10.00" // string 인지 integer 인지 누가 정할까?
+               data: {
+                 ... // Nested object면 아무거나 될 수 있지 않을까?
+               }
+             }
+           }
+         }
+         ```
+
+      3. #### Side Effect, Query Hell, 라이브러리 부족
+
+         > 해당 항목을 묶은 이유는 이에 대한 자료조사가 명확하지 않아서 객관적인 자료에 개인적인 의견을 덧붙여 글을 작성할 것인데 정확하지 않을 수 있기 때문에 미리 알려드립니다.
+
+         - **Side Effect**
+
+           POST /payment/ = 유저 1의 Credit이 변경
+           그런데 이미 클라이언트에서 유저 1을 불러옴 (Credit 값이 동기화되지 않음)
+
+           POST Response 에 payment와 유저의 데이터도 같이 불러와야 하나?
+           GET /user/1 로 한번 더 불러와야 하나?
+
+           **대체 동기화를 어떻게 처리해야하나**
+
+         - **Query Hell**
+
+           필요한 데이터 : 저자, 예약, 예약한 에디터, 교정본, 교정본 에디터, 교정본 리뷰
+           각자 필드마다 가져올 수 있는 필드를 제한
+
+           GET /drafts/?include=author,reservation.editor,revision.editor,revision.review&fields[draft=category,title,content ……
+
+           **엄청 긴 쿼리가 작성(Hell) 되는 문제**
+
+         - **라이브러리 부족**
+
+           RESTful과 JSON API는 프로토콜 일뿐 **쓸만한 라이브러리가 존재하지 않음**
+           결국은 **직접 구현**해서 사용함
+           서버의 모든 **EndPoint에서 JSON API에 맞게 답변**을 해줘야 함
+           클라이언트도 데이터를 받아서 저장/관리해야함
+           다른 로직부분도 신경쓸것이 많은데 라이브러리 관리도 해야함
+
+2. ### 기타
+
+      원래는 REST와 GraphQL에 대한 차이점으로 간단하게 작성할 글이였는데, REST에 대한 개념조사와 REST ? RESTful ? 에 대한 접근이라던지, 작성해야할 자료가 너무 많아서 글을 나눠보려고 합니다. REST에 대한 개념은 이정도로 마치고 (이후에 추가되어야 할 내용이 있다면 추가할게요!) 다음은 REST와 RESTful 그리고 GraphQL 의 개념까지 접근한다음 그 둘의 차이점과 결론 정도로 해서 마무리 지을 생각입니다 :)
+
+      고생하셨습니다!
+
+3. ### 출처
 
       - [REST에서 GraphQL 과 RELAY로 갈아타기 - 이정우](https://www.slideshare.net/deview/112rest-graph-ql-relay)
       - [조대협의 블로그](http://bcho.tistory.com/953)
@@ -60,4 +157,7 @@ tags: [REST, GraphQL] # add tag
       - [GitHub Developer](https://developer.github.com/v3/guides/getting-started/)
       - [GraphQL 강좌 1편 : GraphQL이 무엇인가?](https://velopert.com/2318)
       - [바쁜 개발자들을 위한 REST 논문 요약](https://blog.npcode.com/2017/03/02/%EB%B0%94%EC%81%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%84-%EC%9C%84%ED%95%9C-rest-%EB%85%BC%EB%AC%B8-%EC%9A%94%EC%95%BD/)
+      - [시스템 개선을 위한 REST API 도입](https://younghoe.wordpress.com/2015/06/09/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B0%9C%EC%84%A0%EC%9D%84-%EC%9C%84%ED%95%9C-rest-api-%EB%8F%84%EC%9E%85/)
+      - [REST API여 안녕](https://brunch.co.kr/@kooslab/119)
+      - [당신의 API가 REST 하지 않은 5가지 증거](https://beyondj2ee.wordpress.com/2013/03/21/당신의-api가-restful-하지-않은-5가지-증거/)
       - ​

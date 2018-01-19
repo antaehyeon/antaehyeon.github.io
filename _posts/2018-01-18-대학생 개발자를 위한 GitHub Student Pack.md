@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "대학생 개발자를 위한 GitHub Student Pack"
-date: 2018-01-17 23:17:00 +0900
+date: 2018-01-18 23:17:00 +0900
 description: 대학생 개발자를 위한 GitHub Student Pack을 얻어보자 (optional)
 img: github_pack_0.png # Add image post (optional)
 tags: [대학생개발자, GitHub, Private, StudentPack] # add tag
