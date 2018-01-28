@@ -128,13 +128,7 @@ tags: [NAVER, D2, Front-End, Tech meet up] # add tag
 
        - JavaScript로 구현하려면 꽤나 힘든 작업이지만
 
-       ```html
-         <amp-carousel height="300" layout="fixed-height" type="carousel">
-           <amp-img src="/img/image1.jpg" width="400" height="300" alt="a sample image"></amp-img>
-           <amp-img src="/img/image2.jpg" width="400" height="300" alt="another sample image"></amp-img>
-           <amp-img src="/img/image3.jpg" width="400" height="300" alt="and another sample image"></amp-img>
-         </amp-carousel>
-       ```
+       ![](https://i.imgur.com/WAzCVy5.png)
 
        - AMP-CAROUSEL 쓰면 위의 코드로 바로 구현 가능
        - 까놓고 말하면
