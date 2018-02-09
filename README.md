@@ -1,31 +1,39 @@
-# Flexible-Jekyll is a simple and clean theme for Jekyll
+## 소개
 
-![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
+안녕하세요, 저는 94년생 안태현 입니다!
 
-## Demo
+어렸을 적 부터, 컴퓨터에 흥미가 많았던 아이입니다. 컴퓨터로 하는것들은 모두 좋아하고 새로운 것들을 좋아합니다.  하드웨어를 수집하는 것도 좋아합니다! (하드웨어를 만드는 것은 ... ㅠㅠ)
 
-Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
+프로그래밍을 본격적으로 시작한것은 대학교를 첫 입학했을 때(2012년도)부터 시작했습니다. 
 
-The main page would look like this:
+그리고, 저는 사람이 느끼는 경험을 굉장히 중요시합니다. 그것이 UI던 UX던 모든 환경들을 중요시합니다. 그래서 디자인을 미치도록 했었던 적도, 개발을 미치도록 했었던 적도 있었습니다.
 
-![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
+저의 꿈은 제가 다른사람들한테 지식을 공유해주는 사람이 되는 것이고, 꼭 될 것입니다.
 
-The post page would look like this:
+## 약력
 
-![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
+- Imagine Cup 2017 Korea Finalist
+  - '데시벨(Decibel)'을 기반으로 스마트폰의 정확한 볼륨을 제공하는 안드로이드 프로젝트
+- 세종대학교 EN# 출신
+- 세종대학교 컴퓨터공학 전공
+- 계남초/계남중/계남고 졸업
+- 충청남도 천안 출생
 
-## Features
+## 사이드프로젝트
 
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- Support Emoji
+- Android
+  - ​
+- WEB
+  - YOP
 
-## Installation:
+## 발표
 
-Fork the ``master`` branch and delete ``gh-pages`` branch in it. This is important because ``gh-pages`` branch is used here only to host the blog. You should be using the master branch as the source and create a fresh ``gh-pages`` branch.
+- ​
 
-### License
+## 강의
 
-GNU General Public License v3.0
+- ​
+
+## 하고싶은 말
+
+꾸준하게 한번 해보자구요!
