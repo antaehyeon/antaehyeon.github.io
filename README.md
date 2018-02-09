@@ -1,39 +1,30 @@
-## 소개
+# Hydejack Starter Kit
 
-안녕하세요, 저는 94년생 안태현 입니다!
+A quicker, cleaner way to get started blogging with [Hydejack](https://qwtel.com/hydejack/).
 
-어렸을 적 부터, 컴퓨터에 흥미가 많았던 아이입니다. 컴퓨터로 하는것들은 모두 좋아하고 새로운 것들을 좋아합니다.  하드웨어를 수집하는 것도 좋아합니다! (하드웨어를 만드는 것은 ... ㅠㅠ)
+## Quick Start
+### Running locally
+1. Clone repository (git users), or [download] and unzip.
+2. Open terminal, `cd` into root directory (where `_config.yml` is located)
+3. `bundle install` [^1]
+4. `bundle exec jekyll serve`
+5. Open <http://localhost:4000/hydejack-starter-kit/>
 
-프로그래밍을 본격적으로 시작한것은 대학교를 첫 입학했을 때(2012년도)부터 시작했습니다. 
+### GitHub Pages
+1. Fork this repository.
+2. Go to **Settings**, rename repository to `<your github username>.github.io` (without the `<` `>`)
+3. Edit `_config.yml` (you can do this directly on GitHub)
+    1. Change `url` to `https://<your github username>.github.io` (without the `<` `>`)
+    2. Change `baseurl` to `''` (empty string)
+    3. **Commit changes**.
+4. Go to **Settings** again, look for **GitHub Pages**, set **Source** to **master branch**.
+5. Click **Save** and wait for GitHub to set up your new blag.
 
-그리고, 저는 사람이 느끼는 경험을 굉장히 중요시합니다. 그것이 UI던 UX던 모든 환경들을 중요시합니다. 그래서 디자인을 미치도록 했었던 적도, 개발을 미치도록 했었던 적도 있었습니다.
+## What's next?
+* Open files and read the comments
+* Read the [docs](https://qwtel.com/hydejack/docs/)
+* Buy the [PRO version](https://qwtel.com/hydejack/download/) to get the project and resume layout, newsletter subscription box, custom forms, and more.
 
-저의 꿈은 제가 다른사람들한테 지식을 공유해주는 사람이 되는 것이고, 꼭 될 것입니다.
+[^1]: Requires Bundler. Install with `gem install bundler`.
 
-## 약력
-
-- Imagine Cup 2017 Korea Finalist
-  - '데시벨(Decibel)'을 기반으로 스마트폰의 정확한 볼륨을 제공하는 안드로이드 프로젝트
-- 세종대학교 EN# 출신
-- 세종대학교 컴퓨터공학 전공
-- 계남초/계남중/계남고 졸업
-- 충청남도 천안 출생
-
-## 사이드프로젝트
-
-- Android
-  - ​
-- WEB
-  - YOP
-
-## 발표
-
-- ​
-
-## 강의
-
-- ​
-
-## 하고싶은 말
-
-꾸준하게 한번 해보자구요!
+[download]: https://github.com/qwtel/hydejack-starter-kit/archive/master.zip
