@@ -3,21 +3,22 @@
 # You can change `author1` to your shortname.
 author1:
   # Replace <...> with your own (remove the < >)
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              <Taehyeon> <An>
+  email:             <antaehyeon@sju.ac.kr>
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-    Open `_data/authors.yml` to edit this text.
+    안녕하세요. 94년생 개발자 안태현이라고 합니다.
+    저는 천안에서 태어났으며, 세종대학교에 재학중에 있습니다.
+    
+    현재(2018.04)는 제주도에서 제가 못했던 삶을 살면서 자신과 대화하는 법을 익히고 있습니다.
+    무엇이든지 열심히 하는 성격탓에, 남들보다는 느릴 수 있지만 저는 저가 잘될것임을 믿습니다.
+    느리더라도 한발자국씩 움직이고 있다고 생각합니다 :)
 
   # This photo will be used in the about section.
   picture:
-    path:            https://placehold.it/128x128
+    path:            https://avatars3.githubusercontent.com/u/18719042?s=460&v=4
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
       1x:            https://placehold.it/128x128
