@@ -18,8 +18,9 @@ tagline:             개발자인가, 디자이너인가, 다능인인가
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  빠르게 적응하고 뭐든지 잘한다.
-  단, 끈기가 부족한 상태  
+  빠르게 적응하고 뭐든지 잘한다
+  그리고 무엇인가를 할 때, 제대로 하는 성격
+  단, 끈기가 부족해서 어떻게 해결할까 인생의 최대 난제
 
 # This should be the same author as first entry in `_data/authors.yml`
 author:

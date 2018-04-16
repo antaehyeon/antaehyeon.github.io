@@ -1,5 +1,4 @@
-# This file contains meta data for various social media sites.
-# To add your own, see <https://qwtel.com/hydejack/docs/advanced/#adding-a-custom-social-media-icon>
+# This file contains meta data for various social media sites
 ---
   email:
     name: Email
@@ -200,6 +199,3 @@
     name: PayPal
     icon: icon-paypal
     prepend: "https://www.paypal.me/"
-  download:
-    name: Download
-    icon: icon-box-add

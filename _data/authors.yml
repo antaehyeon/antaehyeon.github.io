@@ -1,38 +1,30 @@
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
-# You can change `author1` to your shortname.
-author1:
-  # Replace <...> with your own (remove the < >)
-  name:              <Taehyeon> <An>
-  email:             <antaehyeon@sju.ac.kr>
+# Change `qwtel` to your shortname (used in the front matter to set a page's author, e.g. `author: qwtel`).
+isme2n:
+  name:              aiden min
+  email:             zooqzqz@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    안녕하세요. 94년생 개발자 안태현이라고 합니다.
-    저는 천안에서 태어났으며, 세종대학교에 재학중에 있습니다.
-    
-    현재(2018.04)는 제주도에서 제가 못했던 삶을 살면서 자신과 대화하는 법을 익히고 있습니다.
-    무엇이든지 열심히 하는 성격탓에, 남들보다는 느릴 수 있지만 저는 저가 잘될것임을 믿습니다.
-    느리더라도 한발자국씩 움직이고 있다고 생각합니다 :)
+    세상에서 가장 게으르기 위해 가장 부지런한 타입.
+    글쓰는 것과 디자인, 개발을 좋아한다. 좋은게 좋은거고, 예쁜게 좋은거고, 노는게 좋은거라고 생각한다. 좋아하는게 많은 편.
 
-  # This photo will be used in the about section.
+  # This photo will be used in the about section
   picture:
-    path:            https://avatars3.githubusercontent.com/u/18719042?s=460&v=4
+    src:             /assets/img/me.jpeg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            https://placehold.it/128x128
-      2x:            https://placehold.it/256x256
+      1x:            /assets/img/me.jpeg
+      2x:            /assets/img/me.jpeg
 
-  # Social media icons in sidebar.
-  # Comment/uncommet to show/hide. Rearrange to change the order in which they appear.
+  # Social media icons in sidebar
+  # Comment/uncommet to show/hide
+  # Icons appear in order, can be rearranged:
   social:
-    twitter:         <username>
-    github:          <username>
-    download:        https://github.com/qwtel/hydejack-starter-kit/archive/master.zip
-    # email:           mailto:<mail@domain.tld>
-    # rss:             https://<url>/feed.xml
-    # facebook:        <username>
+    facebook:        zooqzqz
+    # twitter:         <username>
     # google:          <number>
     # vk:              <username>
     # youtube:         <string_string_string>
@@ -55,6 +47,7 @@ author1:
     # pinterest:       <username>
     # foursquare:      <number>
     # yelp:            <string>
+    github:          isme2n
     # stackoverflow:   <number/username>
     # npm:             <username>
     # hackernews:      <username>
@@ -65,9 +58,11 @@ author1:
     # delicious:       <username>
     # stumbleupon:     <username>
     # paypal:          <username>
+    email:           mailto:zooqzqz@gmail.com
+    rss:             https://isme2n.github.io/feed.xml
 
 # Another author
-author2:
+mdo:
   name:              <firtname> <lastname>
   email:             <mail@domain.tld>
   about:             |
@@ -77,12 +72,8 @@ author2:
 
     Open `_data/authors.yml` to edit this text.
   picture:           https://placehold.it/128x128
-  twitter:           <username>
-  github:            <username>
-
-  # Every author can have his/her own accent color and image.
-  # This will change the appearance of all pages of this author.
-  accent_color:      '#268bd2'
-  accent_image:
-    background:      '#202020'
-    overlay:         false
+  social:
+    github:          <username>
+    twitter:         <username>
+  image: 'data:image/gif;base64,R0lGODlhAQABAPAAACAgIP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' # http://jsfiddle.net/LPxrT/
+  color: '#268bd2'
