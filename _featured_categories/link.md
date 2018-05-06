@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Tip
+title: Link
 slug: tip
 menu: true
 submenu: false
