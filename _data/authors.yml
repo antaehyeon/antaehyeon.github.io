@@ -2,14 +2,15 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `qwtel` to your shortname (used in the front matter to set a page's author, e.g. `author: qwtel`).
 isme2n:
-  name:              aiden min
-  email:             zooqzqz@gmail.com
+  name:              Taehyeon AN
+  email:             antaehyeon@sju.ac.kr
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    세상에서 가장 게으르기 위해 가장 부지런한 타입.
-    글쓰는 것과 디자인, 개발을 좋아한다. 좋은게 좋은거고, 예쁜게 좋은거고, 노는게 좋은거라고 생각한다. 좋아하는게 많은 편.
+    빠르게 적응하고 뭐든지 잘한다.
+    그리고 무엇인가를 할 때, 제대로 하는 성격.
+    단, 끈기가 부족해서 어떻게 해결할까 인생의 최대 난제
 
   # This photo will be used in the about section
   picture:
@@ -23,7 +24,7 @@ isme2n:
   # Comment/uncommet to show/hide
   # Icons appear in order, can be rearranged:
   social:
-    facebook:        an.taehyeon.58
+    # facebook:        an.taehyeon.58
     # twitter:         <username>
     # google:          <number>
     # vk:              <username>
