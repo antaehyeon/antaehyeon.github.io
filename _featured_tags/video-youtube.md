@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: ML
-slug: ml
-category: devlog
+title: Youtube
+slug: youtube
+category: video
 menu: false
 order: 1
 ---
