@@ -23,7 +23,7 @@ isme2n:
   # Comment/uncommet to show/hide
   # Icons appear in order, can be rearranged:
   social:
-    facebook:        
+    facebook:        an.taehyeon.58
     # twitter:         <username>
     # google:          <number>
     # vk:              <username>
@@ -59,7 +59,7 @@ isme2n:
     # stumbleupon:     <username>
     # paypal:          <username>
     email:           mailto:antaehyeon@sju.ac.kr
-    rss:             
+    # rss:             
 
 # Another author
 mdo:
