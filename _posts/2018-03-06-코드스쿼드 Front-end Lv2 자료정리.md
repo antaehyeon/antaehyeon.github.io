@@ -55,12 +55,13 @@ comments: true
 
 - ### Array Parser
 
-  - [Array 데이터 분석](https://github.com/antaehyeon/javascript-json/tree/antaehyeon#array-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D)
-  - [2중 중첩 배열 분석](https://github.com/antaehyeon/javascript-json/tree/antaehyeon#2%EC%A4%91-%EC%A4%91%EC%B2%A9%EB%B0%B0%EC%97%B4-%EB%B6%84%EC%84%9D)
-  - [무한으로 중첩된 배열구조 분석](https://github.com/antaehyeon/javascript-json/tree/antaehyeon#%EB%AC%B4%ED%95%9C%EC%9C%BC%EB%A1%9C-%EC%A4%91%EC%B2%A9%EB%90%9C-%EB%B0%B0%EC%97%B4%EA%B5%AC%EC%A1%B0-%EB%B6%84%EC%84%9D)
-  - 여러가지 타입 분석
-  - Object type 지원
-  - 테스트 코드 작성
-  - 오류상황 탐지
-  - 통계
+  - [Array 데이터 분석](https://github.com/antaehyeon/javascript-json/blob/step9/README/step1.md)
+  - [2중 중첩 배열 분석](https://github.com/antaehyeon/javascript-json/blob/step9/README/step2.md)
+  - [무한으로 중첩된 배열구조 분석](https://github.com/antaehyeon/javascript-json/blob/step9/README/step3.md)
+  - [여러가지 타입 분석](https://github.com/antaehyeon/javascript-json/blob/step9/README/step4.md)
+  - [Object type 지원](https://github.com/antaehyeon/javascript-json/blob/step9/README/step5.md)
+  - [테스트 코드 작성](https://github.com/antaehyeon/javascript-json/blob/step9/README/step6.md)
+  - [오류상황 탐지](https://github.com/antaehyeon/javascript-json/blob/step9/README/step7.md)
+  - [통계](https://github.com/antaehyeon/javascript-json/blob/step9/README/step8.md)
   - 문서화
+  - [기술적인 부분](https://github.com/antaehyeon/javascript-json/blob/step9/README/tech.md)
