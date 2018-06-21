@@ -63,5 +63,5 @@ comments: true
   - [테스트 코드 작성](https://github.com/antaehyeon/javascript-json/blob/step9/README/step6.md)
   - [오류상황 탐지](https://github.com/antaehyeon/javascript-json/blob/step9/README/step7.md)
   - [통계](https://github.com/antaehyeon/javascript-json/blob/step9/README/step8.md)
-  - 문서화
+  - [문서화](https://github.com/antaehyeon/javascript-json/blob/step9/README/step9.md)
   - [기술적인 부분](https://github.com/antaehyeon/javascript-json/blob/step9/README/tech.md)
