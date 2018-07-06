@@ -1,7 +1,7 @@
 ---
 layout: tag-blog
-title: 정보처리기사
-slug: 정보처리기사
+title: 나의 영어사춘기
+slug: 나의 영어사춘기
 category: doc
 menu: false
 order: 1
