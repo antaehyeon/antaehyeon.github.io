@@ -245,7 +245,139 @@ highlightedItems.forEach(function(userItem) {
 
 
 
+### 1-5. DOM 조작 API
 
+---
+
+삭제, 추가, 이동, 교체를 위해 사용하는 DOM API 이다.
+
+- [removeChild()](https://developer.mozilla.org/ko/docs/Web/API/Node/removeChild) : 자식의 엘리먼트를 삭제하는 문법
+
+  ```javascript
+  // Get the <ul> element with id="myList"
+  var list = document.getElementById("myList");   
+  list.removeChild(list.childNodes[0]); // Remove <ul>'s first child node (index 0)
+  ```
+
+- [appendChild()](https://developer.mozilla.org/ko/docs/Web/API/Node/appendChild) : 한 노드를 특정 부모 노드의 자식 노드 리스트 중 **마지막 자식으로** 붙임
+
+  ```javascript
+  // 새로운 단락 요소를 생성하고 문서에 있는 바디 요소의 끝에 붙입니다.
+  var p = document.createElement("p");
+  document.body.appendChild(p);
+  ```
+
+- [insertBefore()](https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore)
+
+  ```HTML
+  <ul id="myList">
+    <li>Coffee</li>
+    <li>Tea</li>
+  </ul>
+  
+  <p>Click the button to insert an item to the list.</p>
+  
+  <button onclick="myFunction()">Try it</button>
+  
+  <script>
+  function myFunction() {
+      var newItem = document.createElement("LI");
+      var textnode = document.createTextNode("Water");
+      newItem.appendChild(textnode);
+  
+      var list = document.getElementById("myList");
+      list.insertBefore(newItem, list.childNodes[0]);
+  }
+  </script>
+  
+  <!-- 
+  Example explained:
+  First create a LI node,
+  then create a Text node,
+  then append the Text node to the LI node.
+  Finally insert the LI node before the first child node in the list.
+  -->
+  ```
+
+  - nextSibling 를 통해서 삽입하는 경우도 있음
+
+    ```HTML
+    <div id="parentElement">
+      <span id="childElement">foo bar</span>
+    </div>
+    
+    <script>
+    // Create a new, plain <span> element
+    var sp1 = document.createElement("span");
+    
+    // Get a reference to the element, before we want to insert the element
+    var sp2 = document.getElementById("childElement");
+    // Get a reference to the parent element
+    var parentDiv = sp2.parentNode;
+    
+    // Insert the new element into the DOM before sp2
+    parentDiv.insertBefore(sp1, sp2);
+    </script>
+    ```
+
+    ```HTML
+    parentDiv.insertBefore(sp1, sp2.nextSibling);
+    ```
+
+- [cloneNode()](https://developer.mozilla.org/ko/docs/Web/API/Node/cloneNode)
+
+  ```javascript
+  var dupNode = node.cloneNode(deep);
+  ```
+
+  - node : 복제되어야 할 node
+  - dupNode : 복제된 새로운 node
+  - deep
+    - true : 해당 node의 childern 까지 복사
+    - false : 해당 node만 복사
+
+- [replaceChild()](https://developer.mozilla.org/ko/docs/Web/API/Node/replaceChild)
+
+  ```javascript
+  replaceNode = parentNode.replaceChild(newChild, oldChild);
+  ```
+
+  - replaceNode 는 교체된 노드로서, oldChild 와 동일한 노드이다.
+  - newChild 는 oldChild를 교체할 새로운 노드이다. (만약 이미 DOM 안에 존재한다면 가장 먼저 제거됨?)
+  - oldChild 는 이미 존재하는, 교체될 자식 노드이다.
+
+  ```javascript
+  // <div>
+  //  <span id="childSpan">foo bar</span>
+  // </div>
+  
+  // 텅빈 요소 노드를 하나 생성합니다.
+  // ID도, 속성도, 컨텐츠도 없습니다.
+  var sp1 = document.createElement("span");
+  
+  // 'newSpan'이란 id 속성을 부여합니다.
+  sp1.id = "newSpan";
+  
+  // 새로운 요소를 위한 컨텐츠를 생성합니다.
+  var sp1_content = document.createTextNode("new replacement span element.");
+  
+  // 컨텐츠를 생성한 요소에 붙입니다.
+  sp1.appendChild(sp1_content);
+  
+  // DOM에 존재하던, 교체되야할 노드를 참조합니다.
+  var sp2 = document.getElementById("childSpan");
+  var parentDiv = sp2.parentNode;
+  
+  // 이미 존재하던 sp2 노드를 새로운 span 요소인 sp1으로 교체합니다.
+  parentDiv.replaceChild(sp1, sp2);
+  
+  // 결과:
+  // <div>
+  //   <span id="newSpan">new replacement span element.</span>
+  // </div>
+  ```
+
+  
 
 
 
