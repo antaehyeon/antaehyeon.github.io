@@ -377,7 +377,127 @@ highlightedItems.forEach(function(userItem) {
   // </div>
   ```
 
-  
+
+
+
+
+### 1-6. DOM 훈련
+
+---
+
+1. **지금 나온 DOM API를 사용해서, strawberry 아래에 새로운 과일을 하나 더 추가해보기. 추가 된 이후에는 다시 삭제해보기. [Jsbin](http://jsbin.com/bihuduhase/edit?html,js,console,output)**
+
+   - `ul` 태그 안에 `li` 를 querySelector 로 조회할 경우, 0부터 시작하는게 아니라 1부터 시작함
+     - #text - element - #text - element ... ?
+
+   ```HTML
+   <!DOCTYPE html>
+   <html>
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+     <title>JS Bin</title>
+   </head>
+   <body>
+     <h1>selector test</h1>
+     
+     <ul>
+       <li>apple</li>
+       <li>orange</li>
+       <li>banana</li>
+       <li>grape</li>
+       <li>strawberry</li>
+     </ul>
+     
+     <button onclick=addFruitElement() id="btn_add">ADD</button>
+     <button onclick=removeFruitElement() id="btn_remove">REMOVE</button>
+   
+   </body>
+   </html>
+   ```
+
+   ```javascript
+   const list = document.querySelector("ul");
+   
+   function addFruitElement() {
+   
+     const sp1 = document.createElement("li");
+     const sp1_content = document.createTextNode("mango");
+     sp1.appendChild(sp1_content);
+   
+     list.appendChild(sp1);
+   }
+   
+   function removeFruitElement() {
+     list.removeChild(list.lastElementChild);
+   }
+   ```
+
+2. **지금 나온 DOM API를 사용해서, 바나나와 오렌지 사이에 새로운 과일을 추가하기** [jsbin](http://jsbin.com/yekorunula/edit?html,js,output)
+
+   ```javascript
+   const fruits = document.querySelectorAll("li");
+   
+   fruits.forEach(function(element) {
+   	if (element.textContent === "orange") {
+   		const newFruitNode = document.createElement("li");
+   		const newFruitTextNode = document.createTextNode("Blueberry");
+   		newFruitNode.appendChild(newFruitTextNode);
+         
+           const fruitParentNode = element.parentElement;
+   		fruitParentNode.insertBefore(newFruitNode, element);
+       }
+   });
+   ```
+
+3. **apple을 grape 와 strawberry 사이로 옮기기.** [Jsbin](http://jsbin.com/zalesuvivo/edit?html,js,console,output)
+
+   ```javascript
+   const fruitList = document.querySelectorAll("li");
+   const fruitParentNode = document.querySelector("ul");
+   
+   let appleNode;
+   let strawberryNode;
+   
+   fruitList.forEach(function(element) {
+   	if(element.textContent === "apple") {
+   		appleNode = element;
+   		fruitParentNode.removeChild(element);
+       }
+   	else if(element.textContent === "strawberry") {
+       	strawberryNode = element;
+   		fruitParentNode.insertBefore(appleNode, element);
+   	}
+   });
+   ```
+
+4. **class가 'red'인 노드만 삭제** [Jsbin](http://jsbin.com/kudiraruyo/1/edit?html,css,js,console,output)
+
+   ```javascript
+   const fruitParentNode = document.querySelector("ul");
+   const fruitList = document.querySelectorAll("li");
+   const redClassNodes = document.getElementsByClassName("red");
+   
+   while(redClassNodes[0]) {
+   	fruitParentNode.removeChild(redClassNodes[0]);
+   }
+   ```
+
+5. **section 태그의 자손 중에 blue라는 클래스를 가지고 있는 노드가 있다면, 그 하위에 있는 h2 노드를 삭제. ** [Jsbin](http://jsbin.com/wequjidaxe/edit?html,js,output)
+
+   ```javascript
+   const blueClassNode = document.getElementsByClassName("blue");
+   const blueClassParentNode = blueClassNode[0].parentNode;
+   const blueSectionNode = blueClassParentNode.parentNode;
+   
+   blueSectionNode.removeChild(blueSectionNode.firstElementChild);
+   ```
+
+   
+
+
+
+
 
 
 
