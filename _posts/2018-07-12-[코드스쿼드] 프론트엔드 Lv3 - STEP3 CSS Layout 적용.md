@@ -111,53 +111,93 @@ comments: true
 
   <br />
 
-  # 리팩토링
+# 리팩토링
 
-  금액 투입하는 Layout 을 position 속성을 이용해서 바꿔볼 것이다
+금액 투입하는 Layout 을 position 속성을 이용해서 바꿔볼 것이다
 
-  - position: relative
-    - `margin-left` 대신 `left` 속성을 이용하였다
-  - position: absolute
-    - 안의 아이템들을 해당 속성으로 설정하였다
-      - 금액 투입 button
-      - 금액 표시 div
-      - 내 지갑 잔액 div
-    - 이렇게 되면, 하나하나씩 top, left 속성을 주어야 하는데 효율적인가?
-    - 반복문이 너무 필요해보임
-  - 역시나 button과 div정렬은 할 수가 없음
-    - height 와 padding-top 값 조정
+- position: relative
+  - `margin-left` 대신 `left` 속성을 이용하였다
+- position: absolute
+  - 안의 아이템들을 해당 속성으로 설정하였다
+    - 금액 투입 button
+    - 금액 표시 div
+    - 내 지갑 잔액 div
+  - 이렇게 되면, 하나하나씩 top, left 속성을 주어야 하는데 효율적인가?
+  - 반복문이 너무 필요해보임
+- 역시나 button과 div정렬은 할 수가 없음
+  - height 와 padding-top 값 조정
 
-  
+<br/>
 
-  
+<br/>
 
-  
+# 피드백
 
-  
+```css
+.UI-ColumnBase > button:nth-of-type(1) {
+    top: 10px;
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(2) {
+    top: 50px;
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(3) {
+    top: 90px;
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(4) {
+    top: 130px;
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(5) {
+    top: 170px; 
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(6) {
+    top: 210px; 
+}
 
-  
+.UI-ColumnBase > button:nth-of-type(7) {
+    top: 250px; 
+}
+```
 
-  
+1. 아 이건 좀 이상한데요. 10-50-90 이렇게 반복적으로 서로 의존하면서 쓰는 것이 좀 이상합니다. 하나가 수정되면 주르륵 영향을 받는 코드라서요 . 이렇게 나열하지 않는 방법을 찾아보면 좋겠어요.
 
-  
+- position 을 사용하기 위해서.. 자체적인 리팩토링 과정에서 발생한 코드다. 음.. 그냥 display 로 배열하는게 더 좋은 방법일까? position 속성을 다르게 사용할 수 있는 방법을 찾아봐야겠다
 
-  
 
-  
 
-  
 
-  
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
