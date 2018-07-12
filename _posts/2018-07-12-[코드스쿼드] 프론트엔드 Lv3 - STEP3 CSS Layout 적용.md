@@ -196,11 +196,12 @@ comments: true
 >
 > 각 회사마다의 코딩컨벤션에 의거하여 작성되어서 '이것이 표준이다' 라고 할 수는 당연히 없지만, 그래도 제가하는 네이밍보다는 훨씬 나을 것 같습니다 :)
 
-1. Github
+1. ### Github
 
 ![](https://i.imgur.com/W69cqkM.png)
 
 ```HTML
+<!-- div class 부분만 발췌함 (완벽한 태그가 아님) -->
 ...
 <div class="position-relative js-heaer-wrapper">
 <a ... class="p-3 bg-blue text-white show-on-focus js-skip-to-content">
@@ -208,6 +209,8 @@ comments: true
 <haeder class="Header f5"
 <div class="d-flex flex-justify-between px-3 container-lg">
 <div class="Popover js-hovercard-content position-absolute">
+<div class="h-card col-3 float-left pr-3">
+<div class="u-photo d-block tooltipped tooltipped-s">
 ...
 ```
 
@@ -218,7 +221,47 @@ comments: true
   - footer 는 `div` 태그에서, class로 `footer` 을 적용함
   - `d-flex` 이런것은 Bootstrap 문법(?) 인가보다
 
+<br/>
 
+2. ### MDN web docs
+
+   ![](https://imgur.com/5OYImoM.png)
+
+   ```HTML
+   <body id="home" class>
+   <header id="main-header class="header-main">
+   <div class="nav-toolbox-wrapper">
+   	<nav id="main-nav class="nav-main">
+   	<div id="toolbox" class="toolbox">
+   		<li class="nav-log">
+   <form id="nav-main-search">
+   	<div class="search-wrap">
+   		<span class="search-trigger">
+   			<svg class="icon icon-search">
+   <main id="content">
+   	<div class="home-masthead">
+   		<div class="center">
+   	<div class="center clear">
+   		<div class="home-callouts">
+   			<div class="column-container center">
+   				<div class="column-callout callout-standard callout-survey">
+   				<div class="column-callout callout-newsletter">
+   					<div class="newsletter">
+   						<div id="newsletterForm">
+   		<div class="home-hacks">
+   		<div class="home-contribute">
+   <footer id="nav-footer class="nav-footer">
+   ```
+
+   - 확실히 아직 HTML을 개발한지 얼마 되지 않은 입장에서 MDN web site 가 더 보기 편한 듯 함
+   - 근데 id와 class 를 바꿔서 사용하는 경우가 조금 있는 것 같음
+     - `id="main-header"` `class="header-main"` 이렇게?
+   - 맨 외부를 감싸는 부분을 id로 지정해놓는 경우가 대다수임
+     - 도중도중 id 가 쓰이는 부분들이 있는데 (id="newsletterForm")
+     - @crong의 피드백을 기억하자
+       - **고유한 (HTML안에 유일하게 존재하는 영역) 곳에 쓰이는게 일반적!**
+
+3. 
 
 
 
