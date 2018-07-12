@@ -186,6 +186,38 @@ comments: true
 
 4. UI라는 이름은.. 다 UI라 안붙혀도 좋을 듯.
 
+<br />
+
+<br />
+
+# HTML Class 네이밍
+
+> 제가 자주 쓰는 서비스 및 좋아하는 회사의 웹페이지에서 class 부분에 대한 네이밍을 조사한 것 입니다.
+>
+> 각 회사마다의 코딩컨벤션에 의거하여 작성되어서 '이것이 표준이다' 라고 할 수는 당연히 없지만, 그래도 제가하는 네이밍보다는 훨씬 나을 것 같습니다 :)
+
+1. Github
+
+![](https://i.imgur.com/W69cqkM.png)
+
+```HTML
+...
+<div class="position-relative js-heaer-wrapper">
+<a ... class="p-3 bg-blue text-white show-on-focus js-skip-to-content">
+<div class="footer container-lg px-3"
+<haeder class="Header f5"
+<div class="d-flex flex-justify-between px-3 container-lg">
+<div class="Popover js-hovercard-content position-absolute">
+...
+```
+
+- class 에서 대부분 `-` 기호를 통해서 구분함
+  - header 는 `class="Header"` 를 적용함
+    - 다른데서는 class="header-logo-invertocat" 라는 태그도 있음
+      - invertocat 가 그 깃허브 고양이 이름인가봄
+  - footer 는 `div` 태그에서, class로 `footer` 을 적용함
+  - `d-flex` 이런것은 Bootstrap 문법(?) 인가보다
+
 
 
 
