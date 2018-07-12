@@ -168,6 +168,24 @@ comments: true
 
 2. id를 부여하는것도 좋은데요. **고유한 (html안에 유일하게 존재하는 영역)에 쓰이는 게 일반적**이에요. 참고하세요.
 
+```css
+<button class="UI-item-base">50원</button>
+<div class="UI-item-base">0개</div>
+<button class="UI-item-base">100원</button>
+<div class="UI-item-base">0개</div>
+```
+
+3. class 이름이 대소문자가 섞여 있어서 별로에요.
+
+```css
+.UI-ColumnBase > div {
+.UI-ColumnBase > div:nth-of-type(1) {
+.UI-ColumnBase > div:nth-of-type(2) {
+...
+```
+
+4. UI라는 이름은.. 다 UI라 안붙혀도 좋을 듯.
+
 
 
 
