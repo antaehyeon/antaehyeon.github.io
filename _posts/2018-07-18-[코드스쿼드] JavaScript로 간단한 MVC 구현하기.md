@@ -17,3 +17,65 @@ comments: true
 
 만약에 MV 부분에 대해서 잘 모르겠다면 [이글](https://antaehyeon.github.io/devlog/2018/07/14/%EC%BD%94%EB%93%9C%EC%8A%A4%EC%BF%BC%EB%93%9C-MV%EC%97%AD%ED%95%A0%EB%82%98%EB%88%84%EA%B8%B0/) 을 참고하면 좋을 것이다.
 
+<br/>
+
+<br/>
+
+## base HTML Code
+
+```html
+할일입력 <input type="text" name="todo">
+<button>등록</button>
+    
+<h4>해야할 일들</h4>
+<ul class="todolist"></ul>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
