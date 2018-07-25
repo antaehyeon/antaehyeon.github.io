@@ -54,6 +54,14 @@ body 부분만 캡쳐한 코드이다. 각자 HTML을 구성해서 body 태그 �
 
 <br/>
 
+## JavaScript - app
+
+
+
+<br/>
+
+<br/>
+
 ## JavaScript - Model
 
 > 일단 현재 구현되어 있는 Model 은 완전히 틀린 개념입니다. 멘토한테 피드백을 통해서 올바른 Model 로 고쳐나갈 예정입니다. 해당 메뉴에서는 필자가 어떤식으로 구현하였는지에 대한 관점으로 지켜보시면 됩니다.
@@ -68,13 +76,8 @@ class TodoModel {
 
     constructor() {
         this.todoInputBox = document.getElementsByName("todo")[0];
-        this.registerationTodoData = document.getElementsByTagName("button");
+        this.todoRegisterationBtn = document.getElementsByTagName("button");
         this.todoListParentUlTag = document.getElementsByClassName("todolist")[0];
-    }
-
-    registerTask(todoData) {
-        const todoListItemNode = this.createListItemNode(todoData);
-        this.todoListParentUlTag.appendChild(todoListItemNode);
     }
 
     createListItemNode(textData) {
@@ -89,10 +92,17 @@ class TodoModel {
         return this.todoInputBox;
     }
 
+    getTodoInputData() {
+        this.todoInputBox.value;
+    }
+
     getTodoListParentUlTag() {
         return this.todoListParentUlTag;
     }
 
+    getTodoRegisterationBtn() {
+        return this.todoRegisterationBtn;
+    }
 }
 ```
 
@@ -143,6 +153,40 @@ class TodoModel {
 ```
 
 현재는 @crong 의 피드백을 기다리고 있는중...
+
+<br/>
+
+<br/>
+
+## JavaScript - View
+
+> View 역시 Model 의 소개글과 같습니다. 아직 불완전한 코드이니, 맹신하시면 안됩니다-!
+
+View 는 너무 명확했다. `DOM 조작에만 집중` `데이터를 받아 그대로 DOM에 추가` 명확했는데도 구현하기가 약간 까다로웠다.
+
+해당 HTML 코드에서는 버튼을 클릭하면, 입력된 내용이 할일로 추가되는 부분이니 그 할일을 추가하는 부분을 구현하면 되겠다고 생각했다.
+
+```javascript
+class TodoView {
+
+    constructor() { }
+    
+    registerTask(parentNode, childNode) {
+        parentNode.appendChild(childNode);
+    }
+}
+```
+
+`registerTask` 라는 메서드를 만들고, 부모노드(parentNode) 와 자식노드(childNode) 를 받아서 부모노드에 추가해주는 `appendChild` 메서드를 사용하였다.
+
+해당 HTML 에서는 **ul태그**가 부모노드가 될 것이고, 새로운 자식노드(li태그)를 만들어서 추가하는 경우가 될 것이다.
+
+여기서 @crong의 피드백은 아래와 같다.
+
+1. view는 진짜 **렌더링에 집중**하는 경우가 많음
+2. Controller 를 통해서 데이터를 받아, 화면을 렌더링하는 코드 (현재, 괜춘함) 이나, View 에서 Model을 접근해서 가져오기도 함
+
+
 
 
 
