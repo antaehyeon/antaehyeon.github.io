@@ -56,7 +56,29 @@ body 부분만 캡쳐한 코드이다. 각자 HTML을 구성해서 body 태그 �
 
 ## JavaScript - app
 
+```javascript
+window.onload = function() {
+    console.log("success window onload");
+    const model = new TodoModel();
+    const controller = new TodoController(model);
+};
+```
 
+model과 view, controller 을 새로 생성하고 새로 생성한 부분들을 넘겨주는 역할을 담당한다.
+
+여기서도 @crong 피드백이 있다.
+
+1. DOMContentLoaded 와 onload 의 차이점을 확인해볼 것
+
+```javascript
+window.addEventListener('DOMContentLoaded', function() {
+    console.log("success window onload");
+    const model = new TodoModel();
+    const view = new TodoView(model);
+    const controller = new TodoController(model, view);
+
+});
+```
 
 <br/>
 
