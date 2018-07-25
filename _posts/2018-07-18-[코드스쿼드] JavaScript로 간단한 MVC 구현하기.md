@@ -23,6 +23,8 @@ comments: true
 
 ## base HTML Code
 
+---
+
 ```html
 할일입력 <input type="text" name="todo">
 <button>등록</button>
@@ -35,11 +37,43 @@ body 부분만 캡쳐한 코드이다. 각자 HTML을 구성해서 body 태그 �
 
 할일을 입력받는 input 태그가 존재하며 등록버튼을 누르면 해야할 일들에 추가되는 것을 구현할 것이다.
 
+추가 기능으로 접기 및 펼치기에 대한 요구사항이 있어서 HTML 에 태그들을 몇개 추가하였다.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    할일입력 <input type="text" name="todo">
+    <button class="register">등록</button>
+    <button class="fold">접기</button>
+    <button class="unfold">펼치기</button>
+    
+    <h4>해야할 일들</h4>
+    <ul class="todolist"></ul>
+
+    <script type="text/javascript" src="./model.js"></script>
+    <script src="./view.js"></script>
+    <script src="./controller.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+    
+</body>
+</html>
+```
+
 <br/>
 
 <br/>
 
 ## 파일을 나눠보자
+
+---
 
 일단 파일을 좀 나눠보았다. 
 
@@ -55,6 +89,8 @@ body 부분만 캡쳐한 코드이다. 각자 HTML을 구성해서 body 태그 �
 <br/>
 
 ## JavaScript - app
+
+---
 
 ```javascript
 window.onload = function() {
@@ -80,11 +116,15 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
+일단은 onload 부분을 addEventListener 로 대체하였다.
+
 <br/>
 
 <br/>
 
 ## JavaScript - Model
+
+---
 
 > 일단 현재 구현되어 있는 Model 은 완전히 틀린 개념입니다. 멘토한테 피드백을 통해서 올바른 Model 로 고쳐나갈 예정입니다. 해당 메뉴에서는 필자가 어떤식으로 구현하였는지에 대한 관점으로 지켜보시면 됩니다.
 
@@ -177,7 +217,7 @@ class TodoModel {
 DOM node 와 연관되지 않도록, 자료구조 형식으로 코드를 바꿨다. 
 
 ```javascript
-/* 2차 리팩토링 */
+/* 2차 리팩토링 (최종)*/
 class TodoModel {
 
     constructor() {
@@ -211,6 +251,8 @@ class TodoModel {
 
 ## JavaScript - View
 
+---
+
 > View 역시 Model 의 소개글과 같습니다. 아직 불완전한 코드이니, 맹신하시면 안됩니다-!
 
 View 는 너무 명확했다. `DOM 조작에만 집중` `데이터를 받아 그대로 DOM에 추가` 명확했는데도 구현하기가 약간 까다로웠다.
@@ -237,11 +279,57 @@ class TodoView {
 1. view는 진짜 **렌더링에 집중**하는 경우가 많음
 2. Controller 를 통해서 데이터를 받아, 화면을 렌더링하는 코드 (현재, 괜춘함) 이나, View 에서 Model을 접근해서 가져오기도 함
 
+```javascript
+/* 1,2 차 리팩토링 */
+class TodoView {
+    constructor(model) {
+        this.model = model;
+    }
+
+    
+    findElementByName(name) {
+        return document.getElementsByName(name)[0];
+    }
+
+    findElementByTagName(name) {
+        return document.getElementsByTagName(name)[0];
+    }
+
+    findElementByClassName(name) {
+        return document.getElementsByClassName(name)[0];
+    }
+
+    createListItemNode() {
+        const listItemNode = document.createElement("li");
+        const textNode = document.createTextNode(this.model.getCurrentInputTodoData());
+        listItemNode.appendChild(textNode);
+
+        return listItemNode;
+    }
+
+    controlTodoListHidden(mode) {
+        const todoListRegisterationBtn = this.findElementByClassName("register");
+        const todoListParentNode = this.findElementByClassName("todolist");
+
+        todoListRegisterationBtn.disabled = (mode === "fold") ? true : false;
+        todoListParentNode.hidden = (mode === "fold") ? true : false;
+    }
+
+    registerTask(parentNode, childNode) {
+        parentNode.appendChild(childNode);
+    }
+}
+```
+
+그래서 위와 같이 코드를 수정하였다. Model 쪽에서의 DOM 을 찾는 부분들을 전부 View 쪽으로 구현하였다. 그리고 렌더링하기 위해 필요한 조작들을 대부분 View 에서 구현하였다.
+
 <br/>
 
 <br/>
 
 ## JavaScript - Controller
+
+---
 
 Controller 은 처음에 내용을 보고 `관제탑` 같다는 느낌을 받았다. 왜냐하면 `Model` 과 `View` 간 변경사항을 연결하는 것이 주된 목표였기 때문이다. 
 
@@ -302,49 +390,92 @@ class TodoController {
 
 그리고 나머지 onclick 을 addEventListener 로 대체하는 것으로 마무리 하였다.
 
+```javascript
+/* 2차 리팩토링 */
+class TodoController {
 
+    constructor(model, view) {
+        this.model = model;
+        this.view = view;
 
+        this.registerEventListener(model, view);
+    }
 
+    /*
+        EVENT LISTENER 을 등록합니다.
+    */
+    registerEventListener(model, view) {
+        const registerationBtn = view.findElementByClassName("register");
+        const todoListfoldingBtn = view.findElementByClassName("fold");
+        const todoListUnfoldingBtn = view.findElementByClassName("unfold");
 
+        registerationBtn.addEventListener("click", () => {
+            this.addTodoListData(model, view);
+        });
 
+        todoListfoldingBtn.addEventListener("click", () => {
+            view.controlTodoListHidden("fold");
+        });
 
+        todoListUnfoldingBtn.addEventListener("click", () => {
+            view.controlTodoListHidden("unfold");
+        });
+    }
 
+    /*
+        BUTTON EVENT
+        할일을 추가하는 이벤트를 담당합니다.
+    */
+    addTodoListData(model, view) {
+        const currentInputData = view.findElementByName("todo").value;
+        model.setCurrentInputTodoData(currentInputData);
+        const todoItemNode = view.createListItemNode();
+        const todoListParentNode = view.findElementByClassName("todolist");
+        view.registerTask(todoListParentNode, todoItemNode);
+        model.pushTodoListData();
+    }
+}
+```
 
+나머지 접기, 펼치기 버튼에 대한 이벤트를 등록하고, 해당 리스트를 조작하는 부분은 View에서 담당하였다.
 
+<br/>
 
+<br/>
 
+## MVC 복습
 
+---
 
+- Model
+  - 데이터를 관리하고 변경한다 `추가` `삭제` `수정`
+- Controller
+  - View의 이벤트에 의해서 동작되는 변경사항을 연결 (이벤트 핸들러 역할을 포함)
+- View
+  - 이벤트를 등록, 로컬상태를 보관, 데이터를 받아서 정제하고, 렌더링 처리
+  - Controller 을 통해서 데이터를 받음
+  - 초기 렌더링은 HTML 상태로 유지 (모든것을 다 그려주지 않는다)
 
+<br/>
 
+<br/>
 
+## DOMContentLoaded 와 onload 의 차이점
 
+---
 
+나중에 추가 예정
 
+<br/>
 
+<br/>
 
+## onclick과 addEventListener의 차이점을 찾아볼 것
 
+> onclick 은 추천하지 않는 방법
 
+나중에 추가 예정
 
+<br/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<br/>
