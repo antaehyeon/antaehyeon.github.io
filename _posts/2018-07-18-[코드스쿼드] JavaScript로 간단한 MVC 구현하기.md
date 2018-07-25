@@ -186,7 +186,70 @@ class TodoView {
 1. view는 진짜 **렌더링에 집중**하는 경우가 많음
 2. Controller 를 통해서 데이터를 받아, 화면을 렌더링하는 코드 (현재, 괜춘함) 이나, View 에서 Model을 접근해서 가져오기도 함
 
+<br/>
 
+<br/>
+
+## JavaScript - Controller
+
+Controller 은 처음에 내용을 보고 `관제탑` 같다는 느낌을 받았다. 왜냐하면 `Model` 과 `View` 간 변경사항을 연결하는 것이 주된 목표였기 때문이다. 
+
+근데 처음에는 변경사항을 연결한다는 부분에서 이해를 잘 못했다. 일단은 버튼에 클릭이벤트를 장착하고 Model 과 View 의 메서드를 이용해서 기능을 연결시키는 것 정도로 이해했다.
+
+```javascript
+class TodoController {
+    constructor(model) {
+        this.todoModel = model;
+        this.todoRegisterationBtn = model.getTodoRegisterationBtn();
+        this.todoRegisterationBtn.onclick = function() {
+            const todoModel = new TodoModel();
+            const todoView = new TodoView();
+            
+            const todoListParentUlTag = todoModel.getTodoListParentUlTag();
+
+            const todoInputData = todoModel.getTodoInputData();
+            const listItemNode = todoModel.createListItemNode(todoInputData);
+    
+            todoView.registerTask(todoListParentUlTag, listItemNode);
+        }
+    }
+}
+```
+
+@crong 피드백
+
+1. 왜 클릭 이벤트 함수 안에서 model 과 view 를 초기화 하나요?
+2. onclick과 addEventListener의 차이점을 찾아볼 것 (onclick은 추천하지 않는 방법이다)
+3. controller 가 model 과 view 를 연결해주는 점에서 괜찮게 구현함
+
+여기서 1번은 onclick 으로 등록해주는데, 자꾸 view와 model이 undefined 가 떠서 해결하기 위해 새로 new 를 통해 새로운 객체를 만들어 주었지만, 정말 쓰면 안되는 방법이다. (인자로 model을 받아와 놓고..)
+
+```javascript
+/* 1차 리팩토링 */
+class TodoController {
+
+    constructor(model, view) {
+        this.model = model;
+        this.view = view;
+        this.registrationBtn = this.view.findElementByTagName("button");
+        this.registerEventListener(this.registrationBtn, this.addTodoListData(model, view));
+    }
+
+    registerEventListener(node, handler) {
+        node.addEventListener("click", this.addTodoListData());
+    }
+
+    addTodoListData(model, view) {
+        const currentInputData = view.findElementByName("todo").value;
+        model.setCurrentInputTodoData(currentInputData);
+        const todoItemNode = model.createListItemNode();
+        const todoListParentNode = view.findElementByClassName("todolist");
+        view.registerTask(todoListParentNode, todoItemNode);
+    }
+}
+```
+
+그리고 나머지 onclick 을 addEventListener 로 대체하는 것으로 마무리 하였다.
 
 
 
