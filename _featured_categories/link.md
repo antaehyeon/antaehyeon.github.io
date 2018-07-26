@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Link
-slug: tip
+slug: link
 menu: true
 submenu: false
 order: 4

@@ -1,8 +1,8 @@
 ---
 layout: tag-blog
-title: Tip
-slug: tip
-category: tip
+title: Link
+slug: link
+category: link
 menu: false
 order: 1
 ---
