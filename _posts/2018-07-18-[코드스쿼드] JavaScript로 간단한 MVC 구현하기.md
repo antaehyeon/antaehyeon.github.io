@@ -475,6 +475,10 @@ class TodoController {
 
   DOMContentLoaded 를 사용할 곳에 onload 를 쓰는것은 상당히 일반적인 실수이다.
 
+- [MDN - DOMContentLoaded](https://developer.mozilla.org/ko/docs/Web/Reference/Events/DOMContentLoaded)
+
+- [Difference between DOMContentLoaded and load events](https://stackoverflow.com/questions/2414750/difference-between-domcontentloaded-and-load-events)
+
 <br/>
 
 <br/>
@@ -483,7 +487,15 @@ class TodoController {
 
 > onclick 은 추천하지 않는 방법
 
-나중에 추가 예정
+- onClick
+  - 하나의 콜백함수만 등록할 수 있음 (2개이상 사용하면 최근것이 덮어씌워버림)
+  - HTML 에서 사용한다면, onClick 형태로 사용할 수 있지만 현재는 거의 사용하지 않음
+- addEventListener
+  - 여러개의 이벤트리스너를 등록할 수 있음
+  - 기능이 표준임에도 불구하고  IE9 이하 버전에서 작동하지 않음
+- [onclick addEventListener 차이점](https://codeclu.com/questions/52/onclick-addeventlistener-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+- [addEventListener와 onclick 비교](https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick)
+- [onclick 대 addEventListener](https://www.simonewebdesign.it/onclick-vs-addeventlistener/)
 
 <br/>
 
