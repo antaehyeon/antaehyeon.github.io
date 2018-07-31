@@ -14,3 +14,4 @@ comments: true
    https://app.codility.com/demo/results/trainingUKVSGG-JBD/ (60/100)
 
    https://app.codility.com/demo/results/trainingGNS8YW-NXK/ (100/100)
+

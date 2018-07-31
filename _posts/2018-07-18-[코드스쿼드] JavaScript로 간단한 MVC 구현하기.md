@@ -464,7 +464,16 @@ class TodoController {
 
 ---
 
-나중에 추가 예정
+- DOMContentLoaded
+
+  - 최초 HTML 문서가 완전히 로드 및 파싱되었을때 발생
+  - 스타일시트나 이미지 및 서브프레임 로드가 끝나기를 기다리지 않음
+
+- onload
+
+  - 오직 모든 페이지가 완전히 로드되었을때 사용
+
+  DOMContentLoaded 를 사용할 곳에 onload 를 쓰는것은 상당히 일반적인 실수이다.
 
 <br/>
 
