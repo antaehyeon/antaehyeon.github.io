@@ -2,8 +2,8 @@
 layout: post
 title:  "[Link]즐겨찾기"
 subtitle:   "Link"
-categories: link
-tags: link
+categories: Link
+tags: Link
 comments: true
 ---
 
