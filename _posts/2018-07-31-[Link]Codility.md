@@ -25,3 +25,7 @@ comments: true
 
    2. OddOccurrencesInArray
 
+      https://app.codility.com/demo/results/trainingRRVPPN-CKV/ (66/100)
+
+      https://app.codility.com/demo/results/trainingXEP7GG-QJ6/ (100/100)
+
