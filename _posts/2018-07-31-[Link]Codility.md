@@ -44,3 +44,11 @@ comments: true
       https://app.codility.com/demo/results/trainingM7YHQ2-FZS/ (100/100)
 
    3. TapeEquilibrium
+
+      https://app.codility.com/demo/results/trainingMZG8KV-THY/ (83/100)
+
+      https://app.codility.com/demo/results/training7FAHTH-VGW/ (100/100)
+
+      https://app.codility.com/demo/results/trainingG2BCAB-UNZ/ (100/100) 코드 최적화
+
+      
