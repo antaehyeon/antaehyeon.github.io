@@ -34,3 +34,12 @@ comments: true
   - Math.ceil() : 소수점 올림, 정수 반환
   - Math.floor() : 소수점 버림, 정수 반환
   - Math.round() : 소수점 반올림, 정수 반환
+
+- JavaScript 배열 (array) 특정 값으로 초기화하기
+
+  ```javascript
+  Array.apply(null, new Array(5)).map(Number.prototype.valueOf, 0);
+  Array.apply(null, new Array(5)).map(String.prototype.valueOf, 'HI');
+  ```
+
+- 배열에서 숫자를 찾는것은 `Arrays.indexOf(value)` 이다.

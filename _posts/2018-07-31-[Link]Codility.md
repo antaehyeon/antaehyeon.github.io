@@ -39,4 +39,8 @@ comments: true
 
    2. PermMissingElem
 
+      https://app.codility.com/demo/results/trainingZX2TG6-XTK/ (10/100)
+
+      https://app.codility.com/demo/results/trainingM7YHQ2-FZS/ (100/100)
+
    3. TapeEquilibrium
