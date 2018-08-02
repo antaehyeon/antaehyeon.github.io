@@ -50,6 +50,7 @@ comments: true
 # CSS
 
 - [CSS 방법론 (SMACSS, BEM, OOCSS)](http://wit.nts-corp.com/2015/04/16/3538)
+- [How to get better at writing CSS](https://medium.freecodecamp.org/how-to-get-better-at-writing-css-a1732c32a72f)
 
 <br/>
 
@@ -132,6 +133,7 @@ comments: true
 - [전문가 시대는 끝났다. 융합적 이해력이 더 중요한 능력](https://news.joins.com/article/22513367)
 - [프로그래머가 이력서 읽는 법](http://blog.creation.net/346)
 - [개발자의 삶, 당신의 도전은 무엇이였나요?](https://m.facebook.com/photo.php?fbid=2113764035530857&id=1916460261927903&set=pcb.2113631985544062&source=48)
+- [24년차 개발자 김민태](https://www.facebook.com/tyzapzi/videos/481371182337888/)
 
 <br/>
 
