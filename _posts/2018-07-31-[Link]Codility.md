@@ -51,4 +51,9 @@ comments: true
 
       https://app.codility.com/demo/results/trainingG2BCAB-UNZ/ (100/100) 코드 최적화
 
-      
+4. [**Counting Elements**](https://app.codility.com/programmers/lessons/4-counting_elements/)
+
+   1. PermCheck
+
+      https://app.codility.com/demo/results/trainingXMQDSU-A5K/ (75/100)
+
