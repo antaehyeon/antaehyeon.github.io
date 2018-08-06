@@ -69,3 +69,7 @@ comments: true
 
       https://app.codility.com/demo/results/trainingVE2UW9-XXG/ (100/100)
 
+   3. MissingInteger
+
+      https://app.codility.com/demo/results/training55RTHV-YRJ/ (100/100)
+

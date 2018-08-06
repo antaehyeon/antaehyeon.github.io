@@ -70,4 +70,11 @@ comments: true
 
 - [JavaScript Set](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set) `var mySet = new Set();`
 
-  
+  - set.prototype.add(value)
+  - set.prototype.clear()
+  - set.prototype.delete(values)
+  - set.prototype.entries()
+  - set.prototype.forEach(callbackFn[, thisArg])
+  - set.prototype.has(value)
+  - set.prototype.keys()
+  - set.prototype.values()
