@@ -59,3 +59,13 @@ comments: true
 
       https://app.codility.com/demo/results/trainingZPHEFQ-KUH/ (100/100)
 
+   2. FrogRiverOne
+
+      https://app.codility.com/demo/results/trainingDKDR66-AK3/ (18/100)
+
+      https://app.codility.com/demo/results/training9D35XM-QQS/ (27/100)
+
+      https://app.codility.com/demo/results/training2N78YZ-55A/ (54/100)
+
+      https://app.codility.com/demo/results/trainingVE2UW9-XXG/ (100/100)
+

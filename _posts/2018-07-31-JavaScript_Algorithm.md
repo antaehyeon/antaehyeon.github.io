@@ -66,3 +66,8 @@ comments: true
 
   꼭 배열을 이용할 필요가 없다면, min 값을 두고 비교하면서 최솟값을 찾을 것
 
+- 등차수열의 합 : n(n+1) / 2
+
+- [JavaScript Set](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set) `var mySet = new Set();`
+
+  
