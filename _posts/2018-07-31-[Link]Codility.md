@@ -57,3 +57,5 @@ comments: true
 
       https://app.codility.com/demo/results/trainingXMQDSU-A5K/ (75/100)
 
+      https://app.codility.com/demo/results/trainingZPHEFQ-KUH/ (100/100)
+
