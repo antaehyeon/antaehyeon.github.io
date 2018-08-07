@@ -64,12 +64,19 @@ comments: true
 
 <br/>
 
+# 안드로이드
+
+- [안드로이드의 MVC, MVP, MVVM 종합 안내서](https://academy.realm.io/kr/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/)
+
+<br/>
+
 # 개발
 
 - [코드리뷰 어디까지 해봤니 ? - 카카오스토리](http://tech.kakao.com/2016/02/04/code-review/)
 - [배달의민족 기술블로그](http://woowabros.github.io/)
 - [이상한 모임](https://blog.weirdx.io/)
 - [Ranked in](http://rankedin.kr/)
+- [MVC, MVP, MVVM 비교](https://magi82.github.io/android-mvc-mvp-mvvm/)
 
 <br/>
 
