@@ -79,3 +79,13 @@ comments: true
 
       https://app.codility.com/demo/results/trainingTKYUJ2-TDG/ (100/100)
 
+5. **[Prefix Sums](https://app.codility.com/programmers/lessons/5-prefix_sums/)**
+
+   1. PassingCars
+
+      https://app.codility.com/demo/results/training9QTZQU-JNB/ (10/100)
+
+      https://app.codility.com/demo/results/trainingSJSTAZ-A5X/ (70/100)
+
+      https://app.codility.com/demo/results/trainingNWTEU9-4V8/ (100/100)
+
