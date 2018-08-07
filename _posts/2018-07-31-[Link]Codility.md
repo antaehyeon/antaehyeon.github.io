@@ -89,3 +89,11 @@ comments: true
 
       https://app.codility.com/demo/results/trainingNWTEU9-4V8/ (100/100)
 
+   2. CountDiv
+
+      https://app.codility.com/demo/results/trainingK7AEC2-7MY/ (50/100)
+
+      https://app.codility.com/demo/results/trainingYCH38D-RXC/ (75/100)
+
+      https://app.codility.com/demo/results/trainingPEYHB6-C2G/ (100/100)
+
