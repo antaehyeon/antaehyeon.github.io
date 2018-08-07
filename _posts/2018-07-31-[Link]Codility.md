@@ -73,3 +73,9 @@ comments: true
 
       https://app.codility.com/demo/results/training55RTHV-YRJ/ (100/100)
 
+   4. MaxCounters
+
+      https://app.codility.com/demo/results/trainingQHD8ZZ-YSE/ (77/100)
+
+      https://app.codility.com/demo/results/trainingTKYUJ2-TDG/ (100/100)
+
