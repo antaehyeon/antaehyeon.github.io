@@ -37,6 +37,7 @@ comments: true
 - [Mocking은 코드 냄새(Code Smell) 입니다](https://midojeong.github.io/2018/04/19/mocking-is-a-code-smell/#%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%802%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9E%85%EB%8B%88%EA%B9%8C)]
 - [프로토타입 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
 - [Javascript 기초 - Object prototype 이해하기](https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67)
+- [테스트 함수, Assert - Chai](http://www.chaijs.com/api/assert/)
 
 <br/>
 
