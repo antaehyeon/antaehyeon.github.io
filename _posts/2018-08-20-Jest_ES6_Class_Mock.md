@@ -108,6 +108,47 @@ it('We can check if the consumer called a method on the class instance', () => {
 
 ### 2. 수동 모형 (Manual Mock)
 
+`__mocks__` 폴더에 모의구현을 저장하여 수동 모형(Manual Mock)을 생성합니다. 이를 통해 구현을 지정할 수 있으며, 테스트 파일 전체에서 사용할 수 있습니다.
+
+```javascript
+// __mocks__/sound-player.js
+
+// Import this named export into your test file:
+export const mockPlaySoundFile = jest.fn();
+const mock = jest.fn().mockImplementation(() => {
+  return {playSoundFile: mockPlaySoundFile};
+});
+
+export default mock;
+```
+
+모든 인스턴스에서 공유하는 Mock 및 Mock 메소드를 가져옵니다.
+
+```javascript
+// sound-player-consumer.test.js
+import SoundPlayer, {mockPlaySoundFile} from './sound-player';
+import SoundPlayerConsumer from './sound-player-consumer';
+jest.mock('./sound-player'); // SoundPlayer is now a mock constructor
+
+beforeEach(() => {
+  // Clear all instances and calls to constructor and all methods:
+  SoundPlayer.mockClear();
+  mockPlaySoundFile.mockClear();
+});
+
+it('We can check if the consumer called the class constructor', () => {
+  const soundPlayerConsumer = new SoundPlayerConsumer();
+  expect(SoundPlayer).toHaveBeenCalledTimes(1);
+});
+
+it('We can check if the consumer called a method on the class instance', () => {
+  const soundPlayerConsumer = new SoundPlayerConsumer();
+  const coolSoundFileName = 'song.mp3';
+  soundPlayerConsumer.playSomethingCool();
+  expect(mockPlaySoundFile).toHaveBeenCalledWith(coolSoundFileName);
+});
+```
+
 
 
 
