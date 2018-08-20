@@ -149,7 +149,25 @@ it('We can check if the consumer called a method on the class instance', () => {
 });
 ```
 
+<br/>
 
+### 3. Module Factory 매개변수를 통한 jest.mock() 호출하기
+
+`jest.mock(path, moduleFactory)` 는 module factory argument 를 사용합니다. module factory 는 Mock 을 반환하는 기능을 가지고 있습니다. 
+
+생성자 함수를 모형(Mock) 하기 위해서 module factory 는 항상 생성자 함수를 리턴해야 합니다. 즉, module factory 는 함수 (higher-order function) (HOF) 를 반환하는 함수여야 합니다.
+
+```javascript
+import SoundPlayer from './sound-player';
+const mockPlaySoundFile = jest.fn();
+jest.mock('./sound-player', () => {
+  return jest.fn().mockImplementation(() => {
+    return {playSoundFile: mockPlaySoundFile};
+  });
+});
+```
+
+ factory parameter 의 한계는 `jest.mock()` 호출을 파일 상단에 호이스트(hosited) 되기 때문에, 변수로 먼저 정의하고 factory 에서 사용할 수 없습니다. `mock` 이라는 단어로 시작하는 변수에는 예외가 존재합니다. 그것들이 제때에 초기화될 수 있도록 보장하는 것은 여러분에게 달려있습니다.
 
 
 
