@@ -169,6 +169,40 @@ jest.mock('./sound-player', () => {
 
  factory parameter 의 한계는 `jest.mock()` 호출을 파일 상단에 호이스트(hosited) 되기 때문에, 변수로 먼저 정의하고 factory 에서 사용할 수 없습니다. `mock` 이라는 단어로 시작하는 변수에는 예외가 존재합니다. 그것들이 제때에 초기화될 수 있도록 보장하는 것은 여러분에게 달려있습니다.
 
+<br/>
+
+### 4. mockImplementation() 또는 mockImplementationOnce() 를 사용하여 Mock 대체
+
+기존의 모형(Mock)에서 `mockImplementation()` 을 호출하여 구현을 변경하거나 단일테스트 또는 모든 테스트를 위해 위의 모의 객체를 모두 대체할 수 있습니다. 
+
+`jest.mock()` 에 대한 호출은 호이스트(hosited) 되어 코드 상단으로 올라갑니다. `beforeAll()` 을 통해 나중에 모의 (mock) 를 지정할 수 있습니다. 기존 mock 에서 `mockImplementation()` 또는 `mockImplementationOnce()` 를 호출하여 factory 매개변수를 대신할 수 있습니다.
+
+```javascript
+import SoundPlayer from './sound-player';
+jest.mock('./sound-player');
+
+describe('When SoundPlayer throws an error', () => {
+  beforeAll(() => {
+    SoundPlayer.mockImplementation(() => {
+      return {
+        playSoundFile: () => {
+          throw new Error('Test error');
+        },
+      };
+    });
+  });
+
+  it('Should throw an error when calling playSomethingCool', () => {
+    const soundPlayerConsumer = new SoundPlayerConsumer();
+    expect(() => soundPlayerConsumer.playSomethingCool()).toThrow();
+  });
+});
+```
+
+<br/>
+
+
+
 
 
 
