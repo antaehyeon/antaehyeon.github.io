@@ -23,11 +23,15 @@ comments: true
 
       https://app.codility.com/demo/results/trainingX7S2BW-Z5D/ (100/100)
 
+      https://app.codility.com/demo/results/trainingNGPK2Z-QWP/?showingAll=1 (100/100, JAVA)
+
    2. OddOccurrencesInArray
 
       https://app.codility.com/demo/results/trainingRRVPPN-CKV/ (66/100)
 
       https://app.codility.com/demo/results/trainingXEP7GG-QJ6/ (100/100)
+
+      https://app.codility.com/demo/results/trainingPYN8QV-3VS/?showingAll=1 (100/100, JAVA)
 
 3. [**Lesson 03 Time Complexity**](https://app.codility.com/programmers/lessons/3-time_complexity/) 
 
