@@ -86,6 +86,12 @@ comments: true
 
       https://app.codility.com/demo/results/trainingZPHEFQ-KUH/ (100/100)
 
+      https://app.codility.com/demo/results/trainingMZDVRM-C8U/?showingAll=1 (100/100, JAVA)
+
+      - 이것 역시 boolean 을 통해서 체크할 배열을 만들어놓고 체크를 해주면 되는데
+      - 약간의 조건식이 필요했다. 이 조건식이 없어서 처음에50%가 나왔는데 중간에 걸러주는 조건식들을
+      - 생각하는 훈련이 필요할 듯 하다
+
    2. FrogRiverOne
 
       https://app.codility.com/demo/results/trainingDKDR66-AK3/ (18/100)
@@ -96,15 +102,32 @@ comments: true
 
       https://app.codility.com/demo/results/trainingVE2UW9-XXG/ (100/100)
 
+      https://app.codility.com/demo/results/trainingEHAKFF-F56/?showingAll=1 (100/100, JAVA)
+
+      - 문제를 이해하기 좀 힘들었다
+      - 자료구조 HashSet 을 이용해서 조건을 검사해서 간단하게 해결
+
    3. MissingInteger
 
       https://app.codility.com/demo/results/training55RTHV-YRJ/ (100/100)
+
+      https://app.codility.com/demo/results/trainingDAWN6Q-SUD/?showingAll=1 (100/100, JAVA)
+
+      - 인자로 들어온 배열의 길이를 가지고 새로운 배열을 생성할 때
+      - 안의 인자의 값이 꼭 배열의 길이보다 낮을거란 생각은 ㄴㄴ
+      - 항상 예외로 해줘야 하는지 체크하는 생각을 들이자 :)
 
    4. MaxCounters
 
       https://app.codility.com/demo/results/trainingQHD8ZZ-YSE/ (77/100)
 
       https://app.codility.com/demo/results/trainingTKYUJ2-TDG/ (100/100)
+
+      https://app.codility.com/demo/results/trainingDZS4Z8-J7U/?showingAll=1 (100/100, JAVA)
+
+      - 배열을 1부터 끝까지 값을 채우거나 순회하는 부분은 시간복잡도에서 걸릴 가능성이 매우 크므로
+      - 따로 뺄 수 있는 부분을 변수를 통해서 저장해놓고, 나중에 그 값들만 처리할 것
+      - 중간에 continue Point 만 있어도 시간복잡도가 많이 개선된다.
 
 5. **[Prefix Sums](https://app.codility.com/programmers/lessons/5-prefix_sums/)**
 
