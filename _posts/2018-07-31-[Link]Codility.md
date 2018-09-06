@@ -7,7 +7,7 @@ tags: link
 comments: true
 ---
 
-> Codility 에서 푼 문제 링크를 보관할 글 입니다.
+> Codility 에서 푼 문제 링크를 보관할 글 입니다.**
 
 1. [**Lesson 01 Iterations**](https://app.codility.com/programmers/lessons/1-iterations/)
 
@@ -139,6 +139,11 @@ comments: true
 
       https://app.codility.com/demo/results/trainingNWTEU9-4V8/ (100/100)
 
+      https://app.codility.com/demo/results/training4MP7HQ-HRK/?showingAll=1 (100/100, JAVA)
+
+      - 수학적인 계산..이 빛을 발한 구간
+      - 0과 1이 따로따로 더해진다면, 0의 카운트를 늘려서 1이나올때마다 0의 나온카운트를 더하는 식으로도 해결할 수 있다
+
    2. CountDiv
 
       https://app.codility.com/demo/results/trainingK7AEC2-7MY/ (50/100)
@@ -146,4 +151,10 @@ comments: true
       https://app.codility.com/demo/results/trainingYCH38D-RXC/ (75/100)
 
       https://app.codility.com/demo/results/trainingPEYHB6-C2G/ (100/100)
+
+      https://app.codility.com/demo/results/trainingD5JVFC-726/?showingAll=1 (100/100, JAVA)
+
+      - 이것 역시 수학적인 계산
+      - 일반적으로 생각하는 방식으로 풀었다간 시간초과 오짐 (mod 이용)
+      - 시간 복잡도를 해결하려면 나머지 연산을 나눗셈으로 바꿀 수 있는 방법을 찾아야 함
 
