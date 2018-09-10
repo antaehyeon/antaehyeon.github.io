@@ -170,3 +170,57 @@ comments: true
       - 범위 (A~B) 가 있으면 B-A 형식으로 빼서 최솟값을 구함
       - 이런말은 좀 그렇지만 미친놈인줄 알았음
 
+   4. MinAvgTwoSlice
+
+      https://app.codility.com/demo/results/trainingU6662C-BGW/?showingAll=1 (100/100, JAVA)
+
+      - 평균은 최소 2가지의 숫자와 3가지의 숫자 이외에는 확률적으로 해당 평균보다 적게나오기가 힘듬
+      - 그래서 맨 처음에 2가지의 숫자의 평균을 각각 구해서 최소 평균과 최소 인덱스값을 저장해놓고
+      - 다음으로 3가의 숫자 평균을 구한다음에 위에서 구했던 최소 평균과 최소 인덱스를 또 비교
+      - 단, 평균값이기 때문에 항상 Double 로 진행해야 하는것은 Point!
+
+6. **[Sort](https://app.codility.com/programmers/lessons/6-sorting/)**
+
+   1. Distinct
+
+      https://app.codility.com/demo/results/trainingUANE87-8XR/?showingAll=1
+
+      - 정렬문제라고 해서 정렬기법을 써야하나 싶었는데, 그냥 Set에 담아두고 Set.size 해주면 끝이였다.
+
+   2. MaxProductOfThree
+
+      https://app.codility.com/demo/results/training4YYGQ9-KWG/?showingAll=1 (44/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingMU856E-XA5/?showingAll=1 (100/100, JAVA)
+
+      - 배열 중 임의의 3개의 숫자를 곱했을 때 가장 큰 결과값을 리턴하는 문제
+
+      - 음수도 포함되어 있기 때문에, 정렬 후 배열 오른쪽 맨 끝 3개의 곱과
+
+      - 배열 왼쪽 맨 끝 2개의 곱 * 배열 오른쪽 끝 1개를 곱해주는 것 중
+
+      - 비교해서 가장 큰 값을 리턴하면 된다.
+
+   3. Triangle
+
+      https://app.codility.com/demo/results/trainingG5GSZ7-27A/?showingAll=1 (93/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingQ7A3VQ-XXB/?showingAll=1 (93/100, JAVA)
+
+      https://app.codility.com/demo/results/training32EUEM-BZC/?showingAll=1 (100/100, JAVA)
+
+      - Int 범위를 항상 생각할 것
+      - OverFlow 체크를 해야한다. 최댓값과 최댓값이 더해지면 OverFlow 되서 2가 출력되기 때문이다
+
+   4. NumberOfDiscIntersections
+
+      https://app.codility.com/demo/results/trainingP2ASWV-SFZ/?showingAll=1 (75/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingQF2355-865/?showingAll=1 (100/100, JAVA)
+
+      - 이건 아직도 모르겠다
+      - 다른 방식을 찾아야 할듯?
+      - 일단 내가 참고한 [Stack OverFlow](https://stackoverflow.com/questions/4801242/algorithm-to-calculate-number-of-intersecting-discs#)
+
+
+1
