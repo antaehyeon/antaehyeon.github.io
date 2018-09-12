@@ -289,3 +289,26 @@ comments: true
       - 이 부분만 고려해서 코드를 작성하면 됨
       - hashMap 을 통해서 구현하였음
 
+9. **Maximum slice problem**
+
+   1. MaxSliceSum
+
+      https://app.codility.com/demo/results/trainingMY3MRM-BBM/?showingAll=1 (7/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingNG2MBP-9GB/?showingAll=1 (23/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingJTXNCZ-E7H/?showingAll=1 (30/100, JAVA)
+
+      https://app.codility.com/demo/results/training3N4YWW-CTS/?showingAll=1 (53/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingPBATHS-SSE/?showingAll=1 (61/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingWQ2425-DZA/?showingAll=1 (100/100, JAVA)
+
+      - 처음에 간단하게 풀 수 있을줄 알았던 문제
+      - Pair 끼리만 비교하면 되는것인줄 알았는데, 전부 비교해야함
+      - 그래서 경우의수가 굉장히 복잡해지는 줄 암
+      - 하지만 2개의 변수를 잘 이용하면 간단하게 풀리는 문제
+      - 0부터 배열의 끝까지 계속 누적한 값과, 현재의 배열값을 비교
+      - 다른 변수에는 반복문이 돌고나서 계산결과가 끝났을 때 가장 큰 값을 기록한다
+      - 마지막으로 큰 값을 리턴
