@@ -265,3 +265,27 @@ comments: true
       - 자료구조는 Stack 을 해결은 크기비교를 이용해서 답을 산출한다.
       - 이런 방식은 비슷한 문제가 나왔을 때 외워둬야할 듯
 
+8. **Leader**
+
+   1. EquiLeader
+
+      https://app.codility.com/demo/results/trainingYCZ4HS-J2J/?showingAll=1 (100/100, JAVA)
+
+      - 해당 문제는 가장 많이 나온 Leader 의 숫자를 가지고 비교하는 방법인데..
+      - 도저히 모르겠다. 한국인 해설이 없어서 내가 알아보기 쉬운 코드를 가지고 디버깅 돌리면서 이해해보려고 해도 안된다
+      - 수학적인 지식이 부족한것일까
+      - counterOfrLeaderInLeft > (i/2) && counterOfrLeaderInRight > (A.length-i) / 2 이 조건이 어떻게 나오는것인지 모르겠다
+
+   2. Dominator
+
+      https://app.codility.com/demo/results/training2654VA-W97/?showingAll=1 (66/100, JAVA)
+
+      https://app.codility.com/demo/results/training73CYRM-HZY/?showingAll=1 (75/100, JAVA)
+
+      https://app.codility.com/demo/results/training5BZSQ2-P8D/?showingAll=1 (100/100, JAVA)
+
+      - 가장 많이 나오는 숫자를 찾는 것
+      - 근데 이것이 배열의 길이를 2로 나눈것보다 작거나 같으면 Dominator 이 될 수 없음
+      - 이 부분만 고려해서 코드를 작성하면 됨
+      - hashMap 을 통해서 구현하였음
+
