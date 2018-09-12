@@ -222,5 +222,46 @@ comments: true
       - 다른 방식을 찾아야 할듯?
       - 일단 내가 참고한 [Stack OverFlow](https://stackoverflow.com/questions/4801242/algorithm-to-calculate-number-of-intersecting-discs#)
 
+7. [**Stacks and Queues**](https://app.codility.com/programmers/lessons/7-stacks_and_queues/nesting/)
 
-1
+   1. Nesting
+
+      https://app.codility.com/demo/results/trainingEK39ZR-S8H/?showingAll=1 (25/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingXCRA3V-PSA/?showingAll=1 (100/100, JAVA)
+
+      - 스택으로 하는것은 맞으나, 여기서 하나 느낀 부분이 있다.
+      - 일단 split 함수는 시간복잡도가 굉장히 오래걸린다
+      - String 을 배열로 만드는것은 toCharArray 메서드를 사용해서 char 배열로 담는게 낫다.
+      - 아니면 toCharArray 와 forEach 문을 이용해서 바로 뽑아내도 되고
+      - 그리고 맨 마지막에 stack에 남아있는 것도 판별해주어야 한다.
+
+   2. Fish
+
+      https://app.codility.com/demo/results/trainingT2BUYU-W98/?showingAll=1 (0/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingCNHX79-PMV/?showingAll=1 (100/100, JAVA)
+
+      - 한쪽의 케이스를 Stack에 담고 비교
+      - 문제의 조건을 잘 이해하고 그 때에 맞춰서 조건을 감소시키거나 증가시켜줄 것
+        - 물고기가 일단 하류로 간다고 해서(Stack에 넣으면 일단 물고기가 증가된 것임)
+
+   3. Brackets
+
+      https://app.codility.com/demo/results/trainingUZD2GE-5QB/?showingAll=1 (62/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingDG93SA-MQ7/?showingAll=1 (100/100, JAVA)
+
+      - 해당 문제도 Stack을 이용하면 간단하게 풀리는 문제
+      - 조건들을 검사한 후 항상 마지막에 Stack에 데이터가 남아있는지 판별할 것
+
+   2. StoneWall
+
+      https://app.codility.com/demo/results/trainingXJQGM5-NS7/?showingAll=1 (100/100, JAVA)
+
+      - 해당 문제는 벽돌을 세울 때 최소한의 벽돌 갯수를 구하는 것인데
+      - 처음에 문제를 이해하기 너무 힘들었다
+      - 이런 문제해결방식도 처음보고
+      - 자료구조는 Stack 을 해결은 크기비교를 이용해서 답을 산출한다.
+      - 이런 방식은 비슷한 문제가 나왔을 때 외워둬야할 듯
+
