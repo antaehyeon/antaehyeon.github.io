@@ -117,7 +117,7 @@ comments: true
       - 안의 인자의 값이 꼭 배열의 길이보다 낮을거란 생각은 ㄴㄴ
       - 항상 예외로 해줘야 하는지 체크하는 생각을 들이자 :)
 
-   4. MaxCounters
+   4. **MaxCounters**
 
       https://app.codility.com/demo/results/trainingQHD8ZZ-YSE/ (77/100)
 
@@ -336,6 +336,30 @@ comments: true
       - 그리고 왼쪽과 오른쪽에 대한 인덱스 차이가 2씩 나므로 X,Y,Z 가 예를들어 1,2,3 이면 1과3은 2차이
       - Y 를 포인트로 잡고 maxLeft 는 -1 maxRight 는 +1 해서 최댓값을 구한다.
 
+10. **Prime and composite numbers**
+
+    1. **CountFactors**
+
+       https://app.codility.com/demo/results/trainingHM7YNM-AJ3/?showingAll=1 (14/100, JAVA)
+
+       https://app.codility.com/demo/results/training8H6PRJ-ZV2/?showingAll=1 (100/100, JAVA)
+
+       - 약수 구하기다.
+       - ~~이건 문제이해가 안되서~~ 다른 사람 코드를 참고했다.	
+       - Math.sqrt 메서드도 알 수 있게되었고
+       - 약수를 일반적인 O(N)의 방식대로 풀면 시간초과가 나므로
+       - O(sqrt(N))정도로 줄여야한다
+
+    2. MinPerimeterRectangle
+
+       https://app.codility.com/demo/results/trainingX9HGQ6-J9Q/?showingAll=1 (100/100, JAVA)
+
+       - 1번 문제를 풀었다면 쉽게 풀 수 있는 문제
+       - sqrt 가 굉장히 유용하다
+       - 쉬운 문제였다
+       - 시간복잡도 `O(sqrt(N))`
+
+    3. Flags
 
 
 
