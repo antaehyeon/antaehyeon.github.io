@@ -212,7 +212,7 @@ comments: true
       - Int 범위를 항상 생각할 것
       - OverFlow 체크를 해야한다. 최댓값과 최댓값이 더해지면 OverFlow 되서 2가 출력되기 때문이다
 
-   4. NumberOfDiscIntersections
+   4. **NumberOfDiscIntersections**
 
       https://app.codility.com/demo/results/trainingP2ASWV-SFZ/?showingAll=1 (75/100, JAVA)
 
@@ -267,7 +267,7 @@ comments: true
 
 8. **Leader**
 
-   1. EquiLeader
+   1. **EquiLeader**
 
       https://app.codility.com/demo/results/trainingYCZ4HS-J2J/?showingAll=1 (100/100, JAVA)
 
@@ -312,3 +312,48 @@ comments: true
       - 0부터 배열의 끝까지 계속 누적한 값과, 현재의 배열값을 비교
       - 다른 변수에는 반복문이 돌고나서 계산결과가 끝났을 때 가장 큰 값을 기록한다
       - 마지막으로 큰 값을 리턴
+
+   2. MaxProfit
+
+      https://app.codility.com/demo/results/trainingWED977-PXG/?showingAll=1 (88/100, JAVA)
+
+      https://app.codility.com/demo/results/trainingU7CPYD-DD4/?showingAll=1 (100/100, JAVA)
+
+      - 변수를 2개 활용
+      - 최소한의 값을 기억하고 있는 `nMin` 변수를 사용
+      - 그리고 인덱스가 높은 배열에서 `nMin` 변수를 빼면서 가장 큰 차액 데이터를 보관함
+      - 배열을 다 돌면 리턴
+      - 간단하죠?
+
+   3. **MaxDoubleSliceSum**
+
+      https://app.codility.com/demo/results/trainingW7BRFA-W9W/?showingAll=1 (100/100, JAVA)
+
+      - 3개의 슬라이스 포인트를 잡고, 해당 인덱스의 값은 뺀 후 사이값만 더해서 최댓값을 알아내는 것인데
+      - 왼쪽부터 시작하고 하나씩 더해서 최댓값의 배열을 만들고 `maxLeft`
+      - 오른쪽부터 시작하고 하나씩 더해서 최댓값의 배열을 만든다 `maxRight`
+      - 서로 다른 값들을 가진 배열이 나온다. 단 0보다 큰 데이터가 들어갈 수 있도록 `Math.max` 로 판별한다.
+      - 그리고 왼쪽과 오른쪽에 대한 인덱스 차이가 2씩 나므로 X,Y,Z 가 예를들어 1,2,3 이면 1과3은 2차이
+      - Y 를 포인트로 잡고 maxLeft 는 -1 maxRight 는 +1 해서 최댓값을 구한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
