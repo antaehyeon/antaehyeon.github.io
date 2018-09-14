@@ -361,6 +361,41 @@ comments: true
 
     3. Flags
 
+11. Sieve of Eratosthenes
+
+12. Euclidean algorithm
+
+    1. ChocolatesByNumbers
+
+       https://app.codility.com/demo/results/trainingW94HVG-JDR/?showingAll=1 (25/100, JAVA)
+
+       https://app.codility.com/demo/results/trainingH6ABRA-BNU/?showingAll=1 (66/100, JAVA)
+
+       https://app.codility.com/demo/results/trainingNUXS8F-U8Q/?showingAll=1 (100/100, JAVA)
+
+       - 유클리드 알고리즘을 사용하였다 (최대공약수를 구하는 알고리즘)
+       - 뭐 뒤에 나누는것은 처음 알았지만
+       - while 문 안에서 나머지 연산을 구한 후, swap
+         - while 문 탈출 조건은 N % M == 0 일 경우
+
+13. Fibonacci numbers
+
+14. Binary search algorithm
+
+15. Caterpillar method
+
+    1. AbsDistinct
+
+       https://app.codility.com/demo/results/trainingZ5WHXB-QYD/?showingAll=1 (100/100, JAVA)
+
+16. Greedy algorithms
+
+17. Dynamic programming
+
+
+
+
+
 
 
 
